@@ -20,10 +20,10 @@ jobs:
           environment-file: ci/environment-lock.yml
 
       - name: "Create conda-locks"
-      working-directory: ./ci
-      run: |
-        conda-lock lock --mamba -p linux-64 -f environment.yml
-        find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
+        working-directory: ./ci
+        run: |
+            conda-lock lock --mamba -p linux-64 -f environment.yml \
+            find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
 
       - name: "Set Job Environment Variables"
         run: |
@@ -43,9 +43,6 @@ jobs:
           workdir: ci
           tags: "main, ${{env.DOCKER_TAG}}"
 
-        - name: Export Full Conda Environment
-          run: |
+      - name: Export Full Conda Environment
+        run: |
             docker run betolink/corn:main conda list --export
-
-
-
