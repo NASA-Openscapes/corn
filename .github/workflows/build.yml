@@ -1,0 +1,51 @@
+name: Build and push Docker image
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-push-docker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: 3.8
+          channels: conda-forge
+          mamba-version: "*"
+          activate-environment: env-lock
+          environment-file: ci/environment-lock.yml
+
+      - name: "Create conda-locks"
+      working-directory: ./ci
+      run: |
+        conda-lock lock --mamba -p linux-64 -f environment.yml
+        find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
+
+      - name: "Set Job Environment Variables"
+        run: |
+          CALVER="$( date -u '+%Y.%m.%d' )"
+          SHA7="${GITHUB_SHA::7}"
+          DOCKER_TAG=$SHA7
+          IMAGE_SPEC="${DOCKER_ORG}/${{ matrix.IMAGE }}:${DOCKER_TAG}"
+          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+          echo "IMAGE_SPEC=${IMAGE_SPEC}" >> $GITHUB_ENV
+
+      - name: "Build and Publish to DockerHub"
+        uses: elgohr/Publish-Docker-Github-Action@2.12
+        with:
+          name: betolink/corn
+          username: betolink
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          workdir: ci
+          tags: "main, ${{env.DOCKER_TAG}}"
+
+        - name: Export Full Conda Environment
+          run: |
+            docker run betolink/corn:main conda list --export
+
+
+

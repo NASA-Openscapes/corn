@@ -1,0 +1,8 @@
+name: nsidc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pangeo-notebook
+  - requests
+  - pip

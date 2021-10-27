@@ -1,0 +1,7 @@
+name: lpdaac
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pangeo-notebook
+  - pip

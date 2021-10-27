@@ -1,0 +1,9 @@
+name: openscapes
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pangeo-notebook
+  - conda-lock~=0.12
+  - mamba~=0.16
+  - pip

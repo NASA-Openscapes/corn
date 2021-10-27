@@ -1,0 +1,9 @@
+zsh
+curl
+git
+jq
+htop
+tmux
+tree
+vim
+neovim
