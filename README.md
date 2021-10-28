@@ -4,7 +4,8 @@ Jupyterhub base image for the [NASA Cloud Hackweek 2021](https://nasa-openscapes
 
 ## Overview
 
-This project allows the provisioning of a multi-kernel Docker base image for Jupyterhub deployments.
+### This project allows the provisioning of a multi-kernel Docker base image for Jupyterhub deployments.
+
 In collaborative efforts -like this NASA hackathon- we work with multiple teams working on different stacks and we often run into situations where `Team A` will need to use Python 3.8 with say `xarray v0.14` and `Team B` may need Python 3.9 and `xarray v0.17`.  A simple solution would be to reconcile these 2 environments so both teams can run their code. However, this is not always straight forward or even possible. Therefore having a multi kernel base image for Jupyter makes a lot of sense. 
 
 **`corn`** uses the amazing [Pangeo's base image](https://github.com/pangeo-data/pangeo-docker-images) and installs all the kernels it finds under `ci/environments`.  The only requirement is to add kernels using environment.yml files (pip dependencies can be included in environment.yml), so we need:
@@ -44,7 +45,7 @@ After we commit our changes to this repo our github workflow will push the resul
 
 For other Jupyterhub deployments we can change the image using the hub configurator object or even in a Kubernetes chart.
 
-Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now. 
+> Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now.
 
 ## What's next?
 

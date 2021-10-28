@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
+  - awscli~=1.21.4
   - pangeo-notebook
   - jupyter-resource-usage
   - conda-lock~=0.12

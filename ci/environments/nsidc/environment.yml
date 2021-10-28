@@ -2,7 +2,7 @@ name: nsidc
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
-  - pangeo-notebook
+  - python=3.9
+  - awscli~=1.21.4
   - requests
   - pip
