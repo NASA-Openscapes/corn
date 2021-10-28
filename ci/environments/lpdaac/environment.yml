@@ -2,6 +2,6 @@ name: lpdaac
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
   - awscli~=1.21.4
+  - ipykernel
   - pip

@@ -3,9 +3,9 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - awscli~=1.21.4
+  - mamba~=0.17
   - pangeo-notebook
+  - awscli~=1.21.4
   - jupyter-resource-usage
   - conda-lock~=0.12
-  - mamba~=0.17
   - pip

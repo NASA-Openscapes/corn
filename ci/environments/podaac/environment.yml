@@ -2,6 +2,6 @@ name: podaac
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
+  - ipykernel
   - awscli~=1.21.4
   - pip
