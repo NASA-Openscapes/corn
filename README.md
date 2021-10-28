@@ -27,7 +27,7 @@ dependencies:
   - pandas>=1.3
   - pip
   - pip:
-	  - tqdm
+    - tqdm
 ```
 and our name.txt file
 ```
