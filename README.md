@@ -2,6 +2,9 @@
 
 Jupyterhub base image for the [NASA Cloud Hackweek 2021](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/)
 
+![](https://img.shields.io/docker/image-size/betolink/corn?sort=date)
+![](https://img.shields.io/docker/v/betolink/corn)
+
 ## Overview
 
 ### This project allows the provisioning of a multi-kernel Docker base image for Jupyterhub deployments.
