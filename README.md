@@ -1,2 +1,54 @@
-# corn
-Jupyterhub base image for the NASA Cloud Hackweek 2021
+# corn 🌽
+
+Jupyterhub base image for the [NASA Cloud Hackweek 2021](https://nasa-openscapes.github.io/2021-Cloud-Hackathon/)
+
+## Overview
+
+This project allows the provisioning of a multi-kernel Docker base image for Jupyterhub deployments.
+In collaborative efforts -like this NASA hackathon- we work with multiple teams working on different stacks and we often run into situations where `Team A` will need to use Python 3.8 with say `xarray v0.14` and `Team B` may need Python 3.9 and `xarray v0.17`.  A simple solution would be to reconcile these 2 environments so both teams can run their code. However, this is not always straight forward or even possible. Therefore having a multi kernel base image for Jupyter makes a lot of sense. 
+
+**`corn`** uses the amazing [Pangeo's base image](https://github.com/pangeo-data/pangeo-docker-images) and installs all the kernels it finds under `ci/environments`.  The only requirement is to add kernels using environment.yml files (pip dependencies can be included in environment.yml), so we need:
+
+* **environment.yml**: conda environment file
+* **name.txt**: the name for the environment, it can be the same as the one used in the environment file
+
+
+## Adding a new kernel
+
+To add a new kernel we need to create a new folder under `ci/environments/` and add the 2 files described above. Say we want to run our amazing new notebook that uses pandas and python 3.10.
+
+We will need a conda environment file names `environment.yml` 
+```yaml
+name: amazing-env
+channels:
+  - conda-forge
+dependencies:
+  - python="3.10"
+  - pandas>=1.3
+  - pip
+  - pip:
+	  - tqdm
+```
+and our name.txt file
+```
+amazing-env
+```
+
+## **That's it!**
+
+## Using a Kernel
+
+After we commit our changes to this repo our github workflow will push the resulting Docker image to dockerhub (right now it's hard-coded to `betolink/corn:$TAG` ) and we just need to update the user image in our Jupyterhub configuration. For 2i2c deployments there is a GUI that allows administrators to do it.
+
+![configurator](https://user-images.githubusercontent.com/717735/139174138-f6eb011e-9cc5-4c15-af68-d77ae5d7ee00.png)
+
+For other Jupyterhub deployments we can change the image using the hub configurator object or even in a Kubernetes chart.
+
+Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now. 
+
+## What's next?
+
+This is a effective but probably inefficient way of building environments, exploring staged partial builds in Docker or using [conda-store](https://github.com/Quansight/conda-store) to build each environment and then pulling them into a Docker image may be more efficient.
+
+The final size of the image depends on the dependencies for each environment, thus avoiding multiple Python versions is still recommended.
+
