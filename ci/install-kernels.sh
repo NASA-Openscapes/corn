@@ -28,7 +28,7 @@ do
   ${NB_PYTHON_PREFIX}/bin/pip install --no-cache-dir -r requirements.txt \
   ; fi \
   ; source activate ${CONDA_ENV} \
-  ; python -m ipykernel install --user --name ${CONDA_ENV} --display-name ${CONDA_ENV}
+  ; python -m ipykernel install --prefix /srv/conda/envs/notebook --name ${CONDA_ENV} --display-name ${CONDA_ENV}
   )
 done
 rm -rf ${HOME}/environments ${HOME}/Dockerfile ${HOME}/apt.txt ${HOME}/environment.yml ${HOME}/start ${HOME}/install-kernels.sh
