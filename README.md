@@ -21,7 +21,7 @@ In collaborative efforts -like this NASA hackathon- we work with multiple teams 
 
 To add a new kernel we need to create a new folder under `ci/environments/` and add the 2 files described above. Say we want to run our amazing new notebook that uses pandas and python 3.10.
 
-We will need a conda environment file names `environment.yml` 
+We will need a conda environment file `environment.yml` 
 ```yaml
 name: amazing-env
 channels:
