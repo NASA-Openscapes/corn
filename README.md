@@ -40,6 +40,8 @@ amazing-env
 
 ## **That's it!**
 
+[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://staging.openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Hackathon&urlpath=lab%2Ftree%2F2021-Cloud-Hackathon%2Ftutorials&branch=main)
+
 ## Using a Kernel
 
 After we commit our changes to this repo our github workflow will push the resulting Docker image to dockerhub (right now it's hard-coded to `betolink/corn:$TAG` ) and we just need to update the user image in our Jupyterhub configuration. For 2i2c deployments there is a GUI that allows administrators to do it.
