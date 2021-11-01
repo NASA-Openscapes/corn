@@ -9,9 +9,9 @@ Jupyterhub base image for the [NASA Cloud Hackweek 2021](https://nasa-openscapes
 
 ### This project allows the provisioning of a multi-kernel Docker base image for Jupyterhub deployments.
 
-In collaborative efforts -like this NASA hackathon- we work with multiple teams working on different stacks and we often run into situations where `Team A` will need to use Python 3.8 with say `xarray v0.14` and `Team B` may need Python 3.9 and `xarray v0.17`.  A simple solution would be to reconcile these 2 environments so both teams can run their code. However, this is not always straight forward or even possible. Therefore having a multi kernel base image for Jupyter makes a lot of sense. 
+In collaborative efforts -like this NASA hackathon- there are multiple teams working on different stacks and we often run into situations where `Team A` will need to use Python 3.8 with say `xarray v0.14` and `Team B` may need Python 3.9 and `xarray v0.17`.  A simple solution would be to reconcile these 2 environments so both teams can run their code. However, this is not always straight forward or even possible. Therefore having a multi kernel base image for Jupyterhub deployments makes a lot of sense. 
 
-**`corn`** uses the amazing [Pangeo's base image](https://github.com/pangeo-data/pangeo-docker-images) and installs all the environments it finds under `ci/environments` and makes them available as kernels in the base image so users can select which kernel to use depending on their needs. The only requirement to add kernels is to use a conda environment.yml file (pip dependencies can be included in environment.yml) and a name file.
+**`corn`** uses the amazing [Pangeo's base image](https://github.com/pangeo-data/pangeo-docker-images), installs all the environments it finds under `ci/environments` and makes them available as kernels in the base image so users can select which kernel to use depending on their needs. The only requirement to add kernels is to use a conda environment.yml file (pip dependencies can be included in environment.yml) and a name file.
 
 * **environment.yml**: conda environment file
 * **name.txt**: the name for the environment, it can be the same as the one used in the environment file

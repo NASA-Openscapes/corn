@@ -50,3 +50,11 @@ jobs:
       - name: Export Full Conda Environment
         run: |
             docker run betolink/corn:main conda list --export
+
+
+      - name: Push new image to hub
+        shell: bash
+        env:
+            JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+        run: |
+            curl "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization:token $JUPYTERHUB_TOKEN"  --data-raw '{"Spawner.default_url":"/lab","KubeSpawner.image":"betolink/corn:${{env.DOCKER_TAG}}"}'
