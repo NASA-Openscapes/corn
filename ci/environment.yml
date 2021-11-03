@@ -32,4 +32,5 @@ dependencies:
   - jupyterlab-geojson~=3.1
   - ipympl~=0.6
   - conda-lock~=0.12
+  - pooch~=1.5
   - pip
