@@ -3,9 +3,31 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - mamba~=0.17
   - pangeo-notebook
-  - awscli~=1.21.4
+  - mamba~=0.17
+  - awscli~=1.21
+  - gdal~=3.3
+  - xarray~=0.19
+  - rioxarray~=0.8
+  - netcdf4~=1.5
+  - h5py~=2.10
+  - geoviews~=1.9
+  - matplotlib-base~=3.4
+  - bqplot~=0.12
+  - geopandas~=0.10
+  - zarr~=2.10
+  - cartopy~=0.20
+  - shapely~=1.7
+  - pyresample~=1.22
+  - joblib~=1.1
+  - pystac-client~=0.3
   - jupyter-resource-usage
+  - ipyleaflet~=0.14
+  - sidecar~=0.5
+  - jupyterlab-geojson~=3.1
+  - ipympl~=0.6
   - conda-lock~=0.12
   - pip
+  - pip:
+    - tqdm
+    - earthdata
