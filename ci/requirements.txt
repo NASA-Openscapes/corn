@@ -1,0 +1,3 @@
+tqdm
+harmony-py
+earthdata
