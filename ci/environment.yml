@@ -6,6 +6,7 @@ dependencies:
   - pangeo-notebook
   - mamba~=0.17
   - awscli~=1.21
+  - boto3~=1.19
   - gdal~=3.3
   - xarray~=0.19
   - rioxarray~=0.8
@@ -13,6 +14,8 @@ dependencies:
   - h5py~=2.10
   - geoviews~=1.9
   - matplotlib-base~=3.4
+  - hvplot~=0.7
+  - pyproj~=3.2
   - bqplot~=0.12
   - geopandas~=0.10
   - zarr~=2.10
