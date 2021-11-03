@@ -1,7 +1,0 @@
-name: podaac
-channels:
-  - conda-forge
-dependencies:
-  - ipykernel
-  - awscli~=1.21.4
-  - pip

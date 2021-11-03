@@ -8,8 +8,9 @@ dependencies:
   - awscli~=1.21
   - boto3~=1.19
   - gdal~=3.3
-  - xarray~=0.19
   - rioxarray~=0.8
+  - xarray~=0.19
+  - h5netcdf~=0.11
   - netcdf4~=1.5
   - h5py~=2.10
   - geoviews~=1.9

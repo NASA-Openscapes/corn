@@ -1,7 +1,0 @@
-name: lpdaac
-channels:
-  - conda-forge
-dependencies:
-  - awscli~=1.21.4
-  - ipykernel
-  - pip
