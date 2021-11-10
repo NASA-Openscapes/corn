@@ -4,8 +4,7 @@ channels:
 dependencies:
   - python=3.9
   - pangeo-notebook
-  - mamba~=0.17
-  - awscli~=1.21
+  - awscli~=1.20
   - boto3~=1.19
   - gdal~=3.3
   - rioxarray~=0.8
