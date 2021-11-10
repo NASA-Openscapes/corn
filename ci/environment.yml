@@ -26,10 +26,11 @@ dependencies:
   - joblib~=1.1
   - pystac-client~=0.3
   - s3fs~=2021.7
-  - jupyter-resource-usage
   - ipyleaflet~=0.14
   - sidecar~=0.5
   - jupyterlab-geojson~=3.1
+  - jupyterlab-git
+  - jupyter-resource-usage
   - ipympl~=0.6
   - conda-lock~=0.12
   - pooch~=1.5
