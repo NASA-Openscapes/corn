@@ -14,6 +14,8 @@ dependencies:
   - h5py~=2.10
   - geoviews~=1.9
   - matplotlib-base~=3.4
+  - seaborn~=0.11
+  - intake~=0.6
   - hvplot~=0.7
   - pyproj~=3.2
   - bqplot~=0.12

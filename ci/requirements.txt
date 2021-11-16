@@ -2,3 +2,4 @@ tqdm
 harmony-py
 earthdata
 zarr-eosdis-store
+rechunker
