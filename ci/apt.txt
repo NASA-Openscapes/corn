@@ -7,3 +7,5 @@ tmux
 tree
 vim
 neovim
+net-tools
+iproute2
