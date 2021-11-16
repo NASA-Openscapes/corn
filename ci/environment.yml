@@ -22,6 +22,7 @@ dependencies:
   - cartopy~=0.20
   - shapely==1.7.1
   - pyresample~=1.22
+  - icepyx~=0.4
   - joblib~=1.1
   - pystac-client~=0.3
   - s3fs~=2021.7
