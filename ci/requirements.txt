@@ -4,3 +4,4 @@ earthdata
 zarr-eosdis-store
 rechunker
 jupyterlab-link-share
+git+https://github.com/nasa/eo-metadata-tools/#egg=eo-metadata-tools-cmr&subdirectory=CMR/python
