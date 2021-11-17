@@ -3,3 +3,4 @@ harmony-py
 earthdata
 zarr-eosdis-store
 rechunker
+jupyterlab-link-share
