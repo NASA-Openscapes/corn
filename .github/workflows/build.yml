@@ -2,8 +2,7 @@ name: Build and push Docker image
 on:
   push:
     paths:
-    - ci/environment.yml
-    - ci/environments/*
+    - ci/*
     - .github/workflows/*
   pull_request:
 
