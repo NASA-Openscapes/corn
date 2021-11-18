@@ -9,6 +9,7 @@ dependencies:
   - gdal~=3.3
   - rioxarray~=0.8
   - xarray~=0.19
+  - xarray-spatial~=0.2
   - h5netcdf~=0.11
   - netcdf4~=1.5
   - h5py~=2.10
