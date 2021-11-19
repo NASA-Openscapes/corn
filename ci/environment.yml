@@ -29,6 +29,8 @@ dependencies:
   - icepyx~=0.4
   - joblib~=1.1
   - pystac-client~=0.3
+  - pydap~=3.2
+  - lxml~=4.6
   - s3fs~=2021.7
   - ipyleaflet~=0.14
   - sidecar~=0.5
