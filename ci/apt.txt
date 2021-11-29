@@ -9,3 +9,4 @@ vim
 neovim
 net-tools
 iproute2
+ffmpeg
