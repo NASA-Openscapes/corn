@@ -5,6 +5,11 @@ FROM pangeo/base-image:2021.09.30
 # FIXME (?): this line breaks the cache of all steps below
 COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
+USER root
+
+RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.2.357/quarto-0.2.357-linux-amd64.deb && dpkg -i quarto.deb
+
+USER ${NB_USER}
 
 RUN conda init zsh && conda init bash
 
