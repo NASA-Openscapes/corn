@@ -40,7 +40,7 @@ amazing-env
 
 > Note: if you have pip installable depencencies, they must be listed using a `requirements.txt` file.
 
-[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Hackathon&urlpath=lab%2Ftree%2F2021-Cloud-Hackathon%2Ftutorials&branch=main)
+<!-- [![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Hackathon&urlpath=lab%2Ftree%2F2021-Cloud-Hackathon%2Ftutorials&branch=main) --> 
 
 ## Using a Kernel
 
