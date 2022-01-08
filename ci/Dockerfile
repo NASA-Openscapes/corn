@@ -7,7 +7,7 @@ COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.2.360/quarto-0.2.360-linux-amd64.deb && dpkg -i quarto.deb
+RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.2.360/quarto-0.2.457-linux-amd64.deb && dpkg -i quarto.deb
 
 USER ${NB_USER}
 
@@ -15,7 +15,7 @@ RUN conda init zsh && conda init bash
 
 WORKDIR ${HOME}/.kernels
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
-ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/user/jjallaire/
+ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/user/${NB_USER}/
 
 
 
