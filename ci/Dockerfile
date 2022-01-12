@@ -15,11 +15,7 @@ RUN conda init zsh && conda init bash
 
 WORKDIR ${HOME}/.kernels
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
-ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/user/${JUPYTERHUB_USER}/
-
-
-
-
+ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
 
 
 
