@@ -40,8 +40,8 @@ jobs:
       - name: "Build and Publish to DockerHub"
         uses: elgohr/Publish-Docker-Github-Action@2.12
         with:
-          name: betolink/corn
-          username: betolink
+          name: openscapes/corn
+          username: openscapes
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           workdir: ci
           tags: "main, ${{env.DOCKER_TAG}}"
@@ -56,4 +56,4 @@ jobs:
         env:
             JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-            curl "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token $JUPYTERHUB_TOKEN"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"betolink/corn:${{env.DOCKER_TAG}}"}'
+            curl "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token $JUPYTERHUB_TOKEN"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{env.DOCKER_TAG}}"}'
