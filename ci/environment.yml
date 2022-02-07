@@ -40,4 +40,5 @@ dependencies:
   - ipympl~=0.6
   - conda-lock~=0.12
   - pooch~=1.5
+  - coiled~=0.0.62
   - pip
