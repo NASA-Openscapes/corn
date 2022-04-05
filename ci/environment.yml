@@ -41,4 +41,5 @@ dependencies:
   - conda-lock~=0.12
   - pooch~=1.5
   - coiled~=0.0.62
+  - earthdata==0.2.2
   - pip
