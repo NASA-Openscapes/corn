@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-push-docker:
     runs-on: ubuntu-latest
+    environment: hub
     defaults:
       run:
         shell: bash -l {0}
@@ -53,7 +54,6 @@ jobs:
 
       - name: Push new image to hub
         shell: bash
-        environment: hub
         env:
             JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
