@@ -55,6 +55,7 @@ jobs:
 
   update-hub-image:
     runs-on: ubuntu-latest
+    needs: build-and-push-docker
     steps:
       - name: get docker tag
         uses: actions/download-artifact@v3
