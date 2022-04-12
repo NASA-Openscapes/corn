@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2
         with:
-          python-version: 3.8
+          python-version: 3.9
           channels: conda-forge
           mamba-version: "*"
           activate-environment: env-lock
@@ -31,12 +31,15 @@ jobs:
 
       - name: "Set Job Environment Variables"
         run: |
-          CALVER="$( date -u '+%Y.%m.%d' )"
           SHA7="${GITHUB_SHA::7}"
           DOCKER_TAG=$SHA7
-          IMAGE_SPEC="betolink/corn:${DOCKER_TAG}"
-          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
-          echo "IMAGE_SPEC=${IMAGE_SPEC}" >> $GITHUB_ENV
+          echo $DOCKER_TAG > docker-tag.txt
+
+      - name: Upload docker tag
+        uses: actions/upload-artifact@v3
+        with:
+          name: docker-tag
+          path: docker-tag.txt
 
       - name: "Build and Publish to DockerHub"
         uses: elgohr/Publish-Docker-Github-Action@2.12
@@ -51,10 +54,19 @@ jobs:
         run: |
             docker run betolink/corn:main conda list --export
 
-
+  update-hub-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get docker tag
+        uses: actions/download-artifact@v3
+        with:
+          name: docker-tag
+      - shell: bash
+        run: |
+          DOCKER_TAG=`cat docker-tag.txt`
       - name: Push new image to hub
         shell: bash
         env:
             JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-            curl "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{env.DOCKER_TAG}}"}'
+            curl -Lv "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{DOCKER_TAG}}"}'
