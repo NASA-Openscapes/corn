@@ -33,6 +33,7 @@ jobs:
           SHA7="${GITHUB_SHA::7}"
           DOCKER_TAG=$SHA7
           echo $DOCKER_TAG > docker-tag.txt
+          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
 
       - name: Upload docker tag
         uses: actions/upload-artifact@v3
