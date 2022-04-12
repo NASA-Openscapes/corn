@@ -9,7 +9,6 @@ on:
 jobs:
   build-and-push-docker:
     runs-on: ubuntu-latest
-    environment: hub
     defaults:
       run:
         shell: bash -l {0}
@@ -69,4 +68,4 @@ jobs:
         env:
           JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
-            curl -Lv "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{DOCKER_TAG}}"}'
+            curl -Lv "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{env.DOCKER_TAG}}"}'
