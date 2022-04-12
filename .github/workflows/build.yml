@@ -67,6 +67,6 @@ jobs:
       - name: Push new image to hub
         shell: bash
         env:
-            JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+          JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
         run: |
             curl -Lv "https://openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{DOCKER_TAG}}"}'
