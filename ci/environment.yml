@@ -32,6 +32,7 @@ dependencies:
   - pydap~=3.2
   - lxml~=4.6
   - s3fs~=2021.7
+  - jinja2==3.0.3
   - rasterstats~=0.16
   - ipyleaflet~=0.14
   - sidecar~=0.5
