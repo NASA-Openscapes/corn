@@ -2,7 +2,7 @@ name: openscapes
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.9
   - pangeo-notebook
   - awscli~=1.20
   - boto3~=1.19
