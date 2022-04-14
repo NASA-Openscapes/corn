@@ -48,6 +48,8 @@ After we commit our changes to this repo, the Github Action will push the result
 
 ![configurator](https://user-images.githubusercontent.com/717735/139174138-f6eb011e-9cc5-4c15-af68-d77ae5d7ee00.png)
 
+Then, you'll go to <https://openscapes.2i2c.cloud/hub/home> > Stop My Server (or File > Log Out) to stop your server and restart it. Then the Docker image should be updated.
+
 For other Jupyterhub deployments we can change the image using the hub configurator object or even in a Kubernetes chart.
 
 > Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now.
