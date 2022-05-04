@@ -4,17 +4,16 @@ channels:
 dependencies:
   - python=3.9
   - pangeo-notebook
-  - awscli~=1.20
-  - boto3~=1.19
+  - boto3
   - gdal~=3.3
   - rioxarray~=0.8
   - xarray~=0.19
   - xarray-spatial~=0.2
   - h5netcdf~=0.11
   - netcdf4~=1.5
-  - h5py~=2.10
+  - h5py~=3.2
   - geoviews~=1.9
-  - matplotlib-base~=3.4
+  - matplotlib-base~=3.5
   - seaborn~=0.11
   - intake~=0.6
   - hvplot~=0.7
@@ -24,16 +23,14 @@ dependencies:
   - zarr~=2.10
   - cartopy~=0.20
   - pynco~=1.0
-  - shapely==1.7.1
+  - shapely~=1.7.1
   - pyresample~=1.22
   - icepyx~=0.4
   - joblib~=1.1
   - pystac-client~=0.3
   - pydap~=3.2
   - lxml~=4.6
-  - s3fs~=2021.7
-  - jinja2==3.0.3
-  - rasterstats~=0.16
+  - s3fs~=2021.11
   - ipyleaflet~=0.14
   - sidecar~=0.5
   - jupyterlab-geojson~=3.1
@@ -42,6 +39,10 @@ dependencies:
   - ipympl~=0.6
   - conda-lock~=0.12
   - pooch~=1.5
+  - kerchunk
   - coiled~=0.0.62
-  - earthdata==0.2.2
+  - earthdata~=0.3
   - pip
+platforms:
+  - linux-64
+  - osx-64

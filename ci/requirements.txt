@@ -1,7 +1,10 @@
+awscli
 tqdm
 harmony-py
-zarr-eosdis-store
 rechunker
+zarr-eosdis-store
 jupyterlab-link-share
+jupyterlab-s3-browser
 nbgitpuller==1.1.0
+h5py==3.2
 jinja2==3.0.3
