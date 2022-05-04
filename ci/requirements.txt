@@ -1,10 +1,7 @@
 awscli
-tqdm
 harmony-py
 rechunker
 zarr-eosdis-store
 jupyterlab-link-share
-jupyterlab-s3-browser
 jinja2==3.0.3
 nbgitpuller==1.1.0
-earthdata==0.3.1
