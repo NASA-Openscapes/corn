@@ -38,7 +38,7 @@ dependencies:
   - ipympl~=0.6
   - conda-lock~=0.12
   - pooch~=1.5
-  - earthdata~=0.3
+  - earthdata=0.3.1
   - kerchunk
   - pqdm
   - coiled
