@@ -1,6 +1,4 @@
-awscli
 harmony-py
-rechunker
 zarr-eosdis-store
 jupyterlab-link-share
 jinja2==3.0.3

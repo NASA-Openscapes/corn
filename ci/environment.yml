@@ -1,45 +1,47 @@
 name: openscapes
 channels:
   - conda-forge
+  - nodefaults
 dependencies:
   - python=3.9
   - pangeo-notebook
   - boto3
-  - gdal~=3.3
-  - rioxarray~=0.8
-  - xarray~=0.19
-  - xarray-spatial~=0.2
-  - h5netcdf~=0.11
-  - netcdf4~=1.5
-  - h5py~=3.2
-  - geoviews~=1.9
-  - matplotlib-base~=3.5
-  - seaborn~=0.11
-  - intake~=0.6
-  - hvplot~=0.7
-  - pyproj~=3.2
-  - bqplot~=0.12
-  - geopandas~=0.10
-  - zarr~=2.10
-  - cartopy~=0.20
-  - pynco~=1.0
-  - shapely~=1.7.1
-  - pyresample~=1.22
-  - icepyx~=0.4
-  - joblib~=1.1
-  - pystac-client~=0.3
-  - pydap~=3.2
-  - lxml~=4.6
-  - ipyleaflet~=0.14
-  - sidecar~=0.5
-  - jupyterlab-geojson~=3.1
+  - gdal
+  - rioxarray
+  - xarray
+  - xarray-spatial
+  - h5netcdf
+  - netcdf4
+  - h5py=3
+  - geoviews
+  - matplotlib-base
+  - seaborn
+  - intake
+  - hvplot
+  - pyproj
+  - bqplot
+  - geopandas
+  - zarr
+  - cartopy
+  - pynco
+  - shapely
+  - pyresample
+  - icepyx
+  - joblib
+  - pystac-client
+  - pydap
+  - lxml
+  - ipyleaflet
+  - sidecar
+  - jupyterlab-geojson
   - jupyterlab-git
   - jupyter-resource-usage
-  - ipympl~=0.6
-  - conda-lock~=0.12
-  - pooch~=1.5
+  - ipympl
+  - conda-lock
+  - pooch
   - earthdata=0.3.1
   - kerchunk
+  - rechunker
   - pqdm
   - coiled
   - s3fs
