@@ -1,7 +1,6 @@
 name: openscapes
 channels:
   - conda-forge
-  - nodefaults
 dependencies:
   - python=3.9
   - pangeo-notebook
