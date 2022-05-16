@@ -38,7 +38,7 @@ dependencies:
   - ipympl
   - conda-lock
   - pooch
-  - earthdata=0.3.1
+  - earthdata>=0.3.1
   - kerchunk
   - rechunker
   - pqdm
