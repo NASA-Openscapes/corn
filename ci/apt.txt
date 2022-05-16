@@ -10,3 +10,10 @@ neovim
 net-tools
 iproute2
 ffmpeg
+gdebi-core
+r-base
+libclang-dev
+sudo
+psmisc
+libpq5
+

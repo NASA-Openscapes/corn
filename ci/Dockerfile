@@ -7,7 +7,7 @@ COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb && dpkg -i quarto.deb
+RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb && dpkg -i quarto.deb  && apt-get clean && wget -O rstudio-server.deb https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.2-485-amd64.deb && gdebi --n rstudio-server.deb
 
 USER ${NB_USER}
 

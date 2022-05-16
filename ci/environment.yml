@@ -1,18 +1,18 @@
 name: openscapes
 channels:
   - conda-forge
-  - r
 dependencies:
   - python=3.9
   - pangeo-notebook
   - boto3
-  - gdal
   - rioxarray
   - xarray
   - xarray-spatial
   - h5netcdf
   - netcdf4
-  - h5py=3
+  - h5py~=3.2
+  - gdal~=3.3
+  - libgdal
   - geoviews
   - matplotlib-base
   - seaborn
@@ -24,6 +24,7 @@ dependencies:
   - zarr
   - cartopy
   - pynco
+  - rasterio
   - shapely
   - pyresample
   - icepyx
@@ -45,7 +46,6 @@ dependencies:
   - pqdm
   - coiled
   - s3fs
-  - rstudio
   - pip
 platforms:
   - linux-64
