@@ -1,6 +1,7 @@
 name: openscapes
 channels:
   - conda-forge
+  - r
 dependencies:
   - python=3.9
   - pangeo-notebook
@@ -44,6 +45,7 @@ dependencies:
   - pqdm
   - coiled
   - s3fs
+  - rstudio
   - pip
 platforms:
   - linux-64
