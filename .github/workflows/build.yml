@@ -52,7 +52,7 @@ jobs:
 
       - name: Export Full Conda Environment
         run: |
-            docker run betolink/corn:main conda list --export
+            docker run openscapes/corn:main conda list --export
 
   update-hub-image:
     runs-on: ubuntu-latest

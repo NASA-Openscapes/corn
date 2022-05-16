@@ -11,9 +11,9 @@ net-tools
 iproute2
 ffmpeg
 gdebi-core
-r-base
+dirmngr
 libclang-dev
 sudo
 psmisc
 libpq5
-
+software-properties-common
