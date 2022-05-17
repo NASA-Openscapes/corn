@@ -7,7 +7,7 @@ COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb && dpkg -i quarto.deb
+RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.419/quarto-0.9.419-linux-amd64.deb && dpkg -i quarto.deb
 
 USER ${NB_USER}
 
