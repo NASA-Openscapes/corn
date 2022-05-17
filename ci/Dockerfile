@@ -2,11 +2,12 @@ FROM pangeo/base-image:2022.03.08
 # build file for pangeo images
 RUN conda init zsh && conda init bash
 
-RUN ${CONDA_DIR}/envs/notebook/bin/julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.build("IJulia")'
 
 COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
+
+RUN julia -e 'using Pkg; Pkg.add("IJulia"); Pkg.build("IJulia")'
 
 ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb
 
