@@ -32,5 +32,4 @@ if [[ ${dirlist[@]} ]]; then # if we have more kernels
     ; python -m ipykernel install --prefix /srv/conda/envs/notebook --name ${CONDA_ENV} --display-name ${CONDA_ENV}
     )
   done
-  rm -rf ${HOME}/environments ${HOME}/Dockerfile ${HOME}/apt.txt ${HOME}/environment.yml ${HOME}/start ${HOME}/install-kernels.sh
 fi

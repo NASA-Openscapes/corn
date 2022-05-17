@@ -17,9 +17,10 @@ dependencies:
   - matplotlib-base
   - seaborn
   - intake
-  - hvplot
+  - hvplot~=0.7
   - pyproj
   - bqplot
+  - julia
   - geopandas
   - zarr
   - cartopy
