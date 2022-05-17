@@ -7,7 +7,7 @@ COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb && dpkg -i quarto.deb && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc && add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" && apt update && apt install --no-install-recommends r-base && apt-get clean && wget -O rstudio-server.deb https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.2-485-amd64.deb && gdebi --n rstudio-server.deb
+RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.248/quarto-0.9.248-linux-amd64.deb && dpkg -i quarto.deb && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc && add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" && apt update && apt install -y --no-install-recommends r-base && wget -O rstudio-server.deb https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.2-485-amd64.deb && gdebi --n rstudio-server.deb && rm -rf rstudio-server.deb quarto.deb && apt-get clean
 
 USER ${NB_USER}
 
