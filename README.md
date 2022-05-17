@@ -44,7 +44,7 @@ amazing-env
 
 ### Updating quarto
 
-To update the quarto installation you'll need to change the version number in two places in corn's [Dockerfile](https://github.com/NASA-Openscapes/corn/blob/main/ci/Dockerfile#L10). After committing changes, the GitHub Action will begin - see next.
+To update the [quarto](https://quarto.org) installation you'll need to change the version number in two places in corn's [Dockerfile](https://github.com/NASA-Openscapes/corn/blob/main/ci/Dockerfile#L10). After committing changes, the GitHub Action will begin - see next.
 
 ## Using a Kernel
 
