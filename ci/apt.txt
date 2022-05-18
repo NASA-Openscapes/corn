@@ -15,5 +15,6 @@ dirmngr
 libclang-dev
 sudo
 psmisc
+build-essential
 libpq5
 software-properties-common
