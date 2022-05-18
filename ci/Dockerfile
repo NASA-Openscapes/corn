@@ -13,7 +13,7 @@ ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.2
 
 ENV RSTUDIO_SERVER=https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.2-485-amd64.deb
 
-RUN wget -O quarto.deb ${QUARTO_CLI} && dpkg -i quarto.deb && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc && add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" && apt update && apt install -y --no-install-recommends r-base && wget -O rstudio-server.deb ${RSTUDIO_SERVER} && gdebi --n rstudio-server.deb && rm -rf rstudio-server.deb quarto.deb && apt-get clean
+RUN wget -O /tmp/quarto.deb ${QUARTO_CLI} && dpkg -i /tmp/quarto.deb && wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc && add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/" && add-apt-repository ppa:c2d4u.team/c2d4u4.0+ && apt update && apt install -y --no-install-recommends r-base r-cran-tidyverse && wget -O /tmp/rstudio-server.deb ${RSTUDIO_SERVER} && gdebi --n /tmp/rstudio-server.deb && rm -rf /tmp/rstudio-server.deb /tmp/quarto.deb && apt-get clean
 
 USER ${NB_USER}
 
