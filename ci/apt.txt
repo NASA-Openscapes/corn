@@ -18,3 +18,12 @@ psmisc
 build-essential
 libpq5
 software-properties-common
+libapparmor1
+libgdal-dev
+gdal-bin
+libgeos-3.8.0
+libproj15
+libudunits2-0
+libxml2
+libzmq3-dev
+libglpk40
