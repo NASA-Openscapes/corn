@@ -1,7 +1,5 @@
-tqdm
 harmony-py
 zarr-eosdis-store
-rechunker
 jupyterlab-link-share
-nbgitpuller==1.1.0
 jinja2==3.0.3
+nbgitpuller==1.1.0

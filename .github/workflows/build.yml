@@ -13,63 +13,64 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-      - uses: actions/checkout@v2
-      - uses: conda-incubator/setup-miniconda@v2
-        with:
-          python-version: 3.9
-          channels: conda-forge
-          mamba-version: "*"
-          activate-environment: env-lock
-          environment-file: ci/environment-lock.yml
+    - uses: actions/checkout@v2
+    - uses: conda-incubator/setup-miniconda@v2
+      with:
+        python-version: 3.9
+        channels: conda-forge
+        mamba-version: "*"
+        activate-environment: env-lock
+        environment-file: ci/environment-lock.yml
 
-      - name: "Create conda-locks"
-        working-directory: ./ci
-        run: |
-            conda-lock lock --mamba -p linux-64 -f environment.yml
-            find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
+    - name: "Create conda-locks"
+      working-directory: ./ci
+      run: |
+          conda-lock lock --mamba -p linux-64 -f environment.yml
+          find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
 
-      - name: "Set Job Environment Variables"
-        run: |
-          SHA7="${GITHUB_SHA::7}"
-          DOCKER_TAG=$SHA7
-          echo $DOCKER_TAG > docker-tag.txt
-          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+    - name: "Set Job Environment Variables"
+      run: |
+        SHA7="${GITHUB_SHA::7}"
+        DOCKER_TAG=$SHA7
+        echo $DOCKER_TAG > docker-tag.txt
+        echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
 
-      - name: Upload docker tag
-        uses: actions/upload-artifact@v3
-        with:
-          name: docker-tag
-          path: docker-tag.txt
+    - name: Upload docker tag
+      uses: actions/upload-artifact@v3
+      with:
+        name: docker-tag
+        path: docker-tag.txt
 
-      - name: "Build and Publish to DockerHub"
-        uses: elgohr/Publish-Docker-Github-Action@2.12
-        with:
-          name: openscapes/corn
-          username: openscapes
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          workdir: ci
-          tags: "main, ${{env.DOCKER_TAG}}"
+    - name: "Build and Publish to DockerHub"
+      uses: elgohr/Publish-Docker-Github-Action@2.12
+      with:
+        name: openscapes/python
+        username: openscapes
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        workdir: ci
+        tags: "main, ${{env.DOCKER_TAG}}"
 
-      - name: Export Full Conda Environment
-        run: |
-            docker run betolink/corn:main conda list --export
+    - name: Export Full Conda Environment
+      run: |
+          docker run openscapes/python:main conda list --export
 
   update-hub-image:
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags/v')
     needs: build-and-push-docker
     steps:
-      - name: get docker tag
-        uses: actions/download-artifact@v3
-        with:
-          name: docker-tag
-      - shell: bash
-        run: |
-          DOCKER_TAG=`cat docker-tag.txt`
-          echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
-      - name: Push new image to hub
-        shell: bash
-        env:
-          JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
-        run: |
-            echo $DOCKER_TAG
-            curl -Lv "https://staging.openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{env.DOCKER_TAG}}"}'
+    - name: get docker tag
+      uses: actions/download-artifact@v3
+      with:
+        name: docker-tag
+    - shell: bash
+      run: |
+        DOCKER_TAG=`cat docker-tag.txt`
+        echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+    - name: Push new image to hub
+      shell: bash
+      env:
+        JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+      run: |
+          echo $DOCKER_TAG
+          curl -Lv "https://staging.openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/python:${{env.DOCKER_TAG}}"}'

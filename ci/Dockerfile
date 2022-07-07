@@ -1,21 +1,21 @@
-FROM pangeo/base-image:2021.09.30
+FROM pangeo/base-image:2022.03.08
 # build file for pangeo images
+RUN conda init zsh && conda init bash
 
-# FIXME (?): user and home folder is hardcoded for now
-# FIXME (?): this line breaks the cache of all steps below
 COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-RUN wget -O quarto.deb https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.449/quarto-0.9.449-linux-amd64.deb && dpkg -i quarto.deb
+ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v0.9.449/quarto-0.9.449-linux-amd64.deb
+
+RUN wget -O /tmp/quarto.deb ${QUARTO_CLI} && dpkg -i /tmp/quarto.deb && rm -rf /tmp/quarto.deb && apt-get clean
 
 USER ${NB_USER}
 
-RUN conda init zsh && conda init bash
-
 WORKDIR ${HOME}/.kernels
+
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
+
+
 ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
-
-
 

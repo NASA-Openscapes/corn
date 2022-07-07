@@ -10,3 +10,5 @@ neovim
 net-tools
 iproute2
 ffmpeg
+build-essential
+software-properties-common
