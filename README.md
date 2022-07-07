@@ -42,6 +42,10 @@ amazing-env
 
 <!-- [![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Hackathon&urlpath=lab%2Ftree%2F2021-Cloud-Hackathon%2Ftutorials&branch=main) --> 
 
+### Updating quarto
+
+To update the [quarto](https://quarto.org) installation you'll need to change the version number in two places in corn's [Dockerfile](https://github.com/NASA-Openscapes/corn/blob/main/ci/Dockerfile#L10). After committing changes, the GitHub Action will begin - see next.
+
 ## Using a Kernel
 
 After we commit our changes to this repo, the Github Action will push the resulting Docker image to [dockerhub](https://hub.docker.com/repository/docker/openscapes/corn). This can take ~20 minutes. Then, we need to update the user image in our Jupyterhub configuration (admin > Services > configurator)(right now it's hard-coded to `openscapes/corn:$TAG`, previously was `betolink`.) For 2i2c deployments there is a GUI that allows administrators to do it.
