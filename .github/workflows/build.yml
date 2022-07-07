@@ -44,7 +44,7 @@ jobs:
     - name: "Build and Publish to DockerHub"
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:
-        name: openscapes/corn
+        name: openscapes/python
         username: openscapes
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         workdir: ci
@@ -52,7 +52,7 @@ jobs:
 
     - name: Export Full Conda Environment
       run: |
-          docker run openscapes/corn:main conda list --export
+          docker run openscapes/python:main conda list --export
 
   update-hub-image:
     runs-on: ubuntu-latest
@@ -73,4 +73,4 @@ jobs:
         JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
       run: |
           echo $DOCKER_TAG
-          curl -Lv "https://staging.openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/corn:${{env.DOCKER_TAG}}"}'
+          curl -Lv "https://staging.openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/python:${{env.DOCKER_TAG}}"}'
