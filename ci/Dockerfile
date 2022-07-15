@@ -6,7 +6,7 @@ COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
 USER root
 
-ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.2/quarto-1.0.2-linux-amd64.deb
+ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v1.0.27/quarto-1.0.27-linux-amd64.deb
 
 RUN wget -O /tmp/quarto.deb ${QUARTO_CLI} && dpkg -i /tmp/quarto.deb && rm -rf /tmp/quarto.deb && apt-get clean
 
