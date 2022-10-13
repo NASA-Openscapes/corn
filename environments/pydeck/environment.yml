@@ -1,0 +1,11 @@
+name: pydeck
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - ipykernel
+  - pydeck
+platforms:
+  - linux-64
+  - osx-64
+  - win-64

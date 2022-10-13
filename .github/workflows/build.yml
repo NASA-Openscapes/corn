@@ -2,7 +2,7 @@ name: Build and push Docker image
 on:
   push:
     paths:
-    - ci/*
+    - ./*
     - .github/workflows/*
   pull_request:
 
@@ -20,10 +20,9 @@ jobs:
         channels: conda-forge
         mamba-version: "*"
         activate-environment: env-lock
-        environment-file: ci/environment-lock.yml
+        environment-file: environment-lock.yml
 
     - name: "Create conda-locks"
-      working-directory: ./ci
       run: |
           conda-lock lock --mamba -p linux-64 -f environment.yml
           find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
@@ -47,7 +46,6 @@ jobs:
         name: openscapes/python
         username: openscapes
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        workdir: ci
         tags: "main, ${{env.DOCKER_TAG}}"
 
     - name: Export Full Conda Environment
