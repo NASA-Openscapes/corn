@@ -28,6 +28,8 @@ jobs:
 
     - name: "Set Job Environment Variables"
       run: |
+        GIT_BRANCH=${GITHUB_BASE_REF:-${GITHUB_REF#refs/heads/}}
+        echo "GIT_BRANCH=$GIT_BRANCH" >> $GITHUB_ENV
         SHA7="${GITHUB_SHA::7}"
         DOCKER_TAG=$SHA7
         echo $DOCKER_TAG > docker-tag.txt
@@ -45,7 +47,7 @@ jobs:
         name: openscapes/python
         username: openscapes
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        tags: "main, ${{env.DOCKER_TAG}}"
+        tags: "${{ env.GIT_BRANCH}}, ${{env.DOCKER_TAG}}"
 
     - name: Export Full Conda Environment
       run: |
