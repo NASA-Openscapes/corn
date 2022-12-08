@@ -40,7 +40,9 @@ dependencies:
   - ipympl
   - conda-lock
   - pooch
-  - earthdata>=0.3.1
+  - earthaccess>=0.4.6
+  - python-magic>=0.4.25
+  - rasterstats
   - kerchunk
   - rechunker
   - pqdm
@@ -50,4 +52,3 @@ dependencies:
 platforms:
   - linux-64
   - osx-64
-  - win-64
