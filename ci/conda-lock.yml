@@ -15,7 +15,7 @@ metadata:
   - url: conda-forge
     used_env_vars: []
   content_hash:
-    linux-64: 5bf9604961c9e481a8210f04ac9b26ab78b8d23798dbc68932bda6a053c9b833
+    linux-64: 528b0509ecf27249865d829026908848b9a1aafb624aff457f175005c9235209
   platforms:
   - linux-64
   sources:
@@ -741,14 +741,14 @@ package:
   dependencies:
     libgcc-ng: '>=12'
   hash:
-    md5: 1fe1b550b5eb4f1f11664e6faddb2413
-    sha256: 130c18015e6bb363bcc83163600dda763265c6290fe22b3e88aab8399ce4f29e
+    md5: 2161070d867d1b1204ea749c8eec4ef0
+    sha256: 03a6d28ded42af8a347345f82f3eebdd6807a08526d47899a42d62d319609162
   manager: conda
   name: xz
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.9-h166bdaf_0.conda
-  version: 5.2.9
+  url: https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.6-h166bdaf_0.tar.bz2
+  version: 5.2.6
 - category: main
   dependencies:
     libgcc-ng: '>=9.4.0'
@@ -2844,14 +2844,14 @@ package:
   dependencies:
     python: '>=3.7'
   hash:
-    md5: eac7f31ed845349846e36bb36d575cc5
-    sha256: abf89ff3ce93b4bfbf6ab3a75cd98502b153ef15f02838d911300f7e6f2bdec3
+    md5: 202405f939ee9271e641922de27e2c5a
+    sha256: ad1b029878c74cadd8d85c3635f6d483f680d8e0ed291bf1516ac4598efa835f
   manager: conda
   name: traitlets
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/noarch/traitlets-5.6.0-pyhd8ed1ab_0.conda
-  version: 5.6.0
+  url: https://conda.anaconda.org/conda-forge/noarch/traitlets-5.7.0-pyhd8ed1ab_0.conda
+  version: 5.7.0
 - category: main
   dependencies:
     python: '>=3'
@@ -3321,16 +3321,16 @@ package:
 - category: main
   dependencies:
     python: '>=3.6'
-    traitlets: ''
+    traitlets: '>=5.3'
   hash:
-    md5: b7a6eec95756cb01c90190261e61adb3
-    sha256: ae3d6123a419894acac7edca6426b34f1fefeb5cc26bc749c8bb5559b6b5cc0a
+    md5: 3c78af4752bb1600ebe5e83ef4588eaa
+    sha256: b33f5e5eb2bedefc3db622dd0b2f4ea67b621080153913eb22486aac78b6f54f
   manager: conda
   name: comm
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/noarch/comm-0.1.1-pyhd8ed1ab_0.conda
-  version: 0.1.1
+  url: https://conda.anaconda.org/conda-forge/noarch/comm-0.1.2-pyhd8ed1ab_0.conda
+  version: 0.1.2
 - category: main
   dependencies:
     future: '>=0.14.0'
@@ -5962,14 +5962,14 @@ package:
     python: '>=3.7'
     requests: ''
   hash:
-    md5: 7141271af36d1e0a1c6d5a955528bc1e
-    sha256: 3dbc52a6c15d7e9c07f0f9424ef1cd850a95238437b2be14a6243835bda55db0
+    md5: 3b3eea0d8676303ff883e7581f30556d
+    sha256: 84b051c1edc431556fd994a4974e6fa3c8c3ccf5c4acf93c8991828ec9bec016
   manager: conda
   name: jupyterlab_server
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.16.3-pyhd8ed1ab_0.tar.bz2
-  version: 2.16.3
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.16.5-pyhd8ed1ab_0.conda
+  version: 2.16.5
 - category: main
   dependencies:
     nbconvert-core: 7.2.6 pyhd8ed1ab_0
