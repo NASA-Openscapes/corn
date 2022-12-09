@@ -1,7 +1,0 @@
-name: env-lock
-channels:
-  - conda-forge
-dependencies:
-  - conda-lock>=1.0.1
-  - mamba>=0.22
-  - pip
