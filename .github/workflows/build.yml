@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: conda-incubator/setup-miniconda@v2
       with:
-        python-version: 3.9
+        python-version: "3.10"
         channels: conda-forge
         mamba-version: "*"
         activate-environment: env-lock
@@ -23,8 +23,8 @@ jobs:
     - name: "Create conda-locks"
       working-directory: ./ci
       run: |
-          conda-lock lock --mamba -p linux-64 -f environment.yml
-          find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --mamba -p linux-64 -f environment.yml"
+          conda-lock lock --kind explicit --mamba -p linux-64 -f environment.yml
+          find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock lock --kind explicit --mamba -p linux-64 -f environment.yml"
 
     - name: "Set Job Environment Variables"
       run: |
