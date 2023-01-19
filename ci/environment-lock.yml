@@ -2,6 +2,11 @@ name: env-lock
 channels:
   - conda-forge
 dependencies:
+<<<<<<< HEAD
   - conda-lock
   - mamba
+=======
+  - conda-lock>=1.0.1
+  - mamba>=1.0
+>>>>>>> earthaccess
   - pip
