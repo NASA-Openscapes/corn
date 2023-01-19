@@ -1,5 +1,0 @@
-harmony-py
-zarr-eosdis-store
-jupyterlab-link-share
-jinja2==3.0.3
-nbgitpuller==1.1.0

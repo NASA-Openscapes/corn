@@ -2,22 +2,22 @@ name: openscapes
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.11
   - pangeo-notebook
-  - boto3
+  - dask
+  - distributed
   - rioxarray
-  - xarray
-  - xarray-spatial
+  - xarray>=2022.12
   - h5netcdf
   - netcdf4
-  - h5py~=3.2
-  - gdal~=3.3
+  - h5py
+  - gdal~=3.6
   - libgdal
   - geoviews
   - matplotlib-base
   - seaborn
   - intake
-  - hvplot~=0.7
+  - hvplot
   - pyproj
   - bqplot
   - geopandas
@@ -33,21 +33,22 @@ dependencies:
   - pydap
   - lxml
   - ipyleaflet
-  - sidecar
   - jupyterlab-geojson
   - jupyterlab-git
   - jupyter-resource-usage
+  - jupyterlab-link-share
   - ipympl
   - conda-lock
   - pooch
-  - earthaccess>=0.4.6
-  - python-magic>=0.4.25
+  - earthaccess>=0.4.7
   - rasterstats
   - kerchunk
   - rechunker
   - pqdm
   - coiled
   - s3fs
+  - jinja2~=3.0.3
+  - nbgitpuller~=1.1.0
   - pip
 platforms:
   - linux-64

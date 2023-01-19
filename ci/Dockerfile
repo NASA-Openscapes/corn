@@ -1,4 +1,4 @@
-FROM pangeo/base-image:2022.03.08
+FROM pangeo/base-image:2023.01.13
 # build file for pangeo images
 RUN conda init zsh && conda init bash
 
