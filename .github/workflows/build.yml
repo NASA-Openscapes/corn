@@ -12,10 +12,13 @@ jobs:
         shell: bash -l {0}
     steps:
     - uses: actions/checkout@v2
-    - uses: mamba-org/provision-with-micromamba@v14
+    - uses: conda-incubator/setup-miniconda@v2
       with:
-        cache-env: true
+        python-version: "3.11"
+        channels: conda-forge
+        miniforge-variant: Mambaforge
         environment-file: ci/environment-lock.yml
+        activate-environment: env-lock
 
     - name: "Create conda-locks"
       working-directory: ./ci
