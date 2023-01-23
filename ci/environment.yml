@@ -49,6 +49,8 @@ dependencies:
   - s3fs
   - jinja2~=3.0.3
   - nbgitpuller~=1.1.0
+  - jupyterlab-h5web
+  - hdf5plugin
   - pip
 platforms:
   - linux-64
