@@ -43,7 +43,7 @@ dependencies:
   - ipympl
   - conda-lock
   - pooch
-  - earthaccess>=0.4.7
+  - earthaccess>=0.5.1
   - rasterstats
   - kerchunk
   - rechunker
