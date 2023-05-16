@@ -48,7 +48,7 @@ To update the [quarto](https://quarto.org) installation you'll need to change th
 
 ## Using a Kernel
 
-After we commit our changes to this repo, the Github Action will push the resulting Docker image to [dockerhub](https://hub.docker.com/repository/docker/openscapes/corn). This can take ~20 minutes. Then, we need to update the user image in our Jupyterhub configuration (admin > Services > configurator)(right now it's hard-coded to `openscapes/corn:$TAG`, previously was `betolink`.) For 2i2c deployments there is a GUI that allows administrators to do it.
+After we commit our changes to this repo, create a tagged release with format `vYYYY.MM.DD`. This is important because the GitHub Action build only gets triggered with that tagged release format. Then, the Github Action will push the resulting Docker image to [dockerhub](https://hub.docker.com/repository/docker/openscapes/corn). This can take ~20 minutes. Then, we need to update the user image in our Jupyterhub configuration (admin > Services > configurator)(right now it's hard-coded to `openscapes/corn:$TAG`, previously was `betolink`.) For 2i2c deployments there is a GUI that allows administrators to do it.
 
 ![configurator](https://user-images.githubusercontent.com/717735/139174138-f6eb011e-9cc5-4c15-af68-d77ae5d7ee00.png)
 
