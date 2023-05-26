@@ -41,7 +41,7 @@ jobs:
     - name: "Build and Publish to DockerHub"
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:
-        name: openscapes/nmfsdatasci
+        name: openscapes/python
         username: openscapes
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         workdir: ci
@@ -64,3 +64,10 @@ jobs:
       run: |
         DOCKER_TAG=`cat docker-tag.txt`
         echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+    - name: Push new image to hub
+      shell: bash
+      env:
+        JUPYTERHUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+      run: |
+          echo $DOCKER_TAG
+          curl -Lv "https://staging.openscapes.2i2c.cloud/services/configurator/config" -X POST -H "Content-Type: application/json" -H "Authorization: token ${{env.JUPYTERHUB_TOKEN}}"  --data '{"Spawner.default_url":"/lab","KubeSpawner.image":"openscapes/python:${{env.DOCKER_TAG}}"}'
