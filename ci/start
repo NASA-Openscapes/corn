@@ -6,4 +6,4 @@ export PANGEO_ENV="openscapes"
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-exec "$@"
+exec "$@" --ResourceUseDisplay.track_cpu_percent=True

@@ -3,13 +3,12 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - pangeo-notebook
   - dask
   - distributed
   - rioxarray
   - xarray>=2022.12
   - h5netcdf
-  - netcdf4
+  - netcdf4=1.6.4
   - h5py
   - gdal~=3.6
   - libgdal
@@ -34,25 +33,27 @@ dependencies:
   - pydap
   - lxml
   - ipyleaflet
+  - dask-labextension
+  - jupyterlab>=4.0
+  - jupyter-server-proxy
+  - jupyterhub-singleuser
   - jupyterlab-geojson
   - jupyterlab-git
   - jupyter-resource-usage
-  - jupyterlab-link-share
+  - jupyter-collaboration
   - jupyterlab-h5web
   - hdf5plugin
   - ipympl
   - conda-lock
   - pooch
-  - earthaccess>=0.5.1
+  - earthaccess>=0.5.3
   - rasterstats
   - kerchunk
   - rechunker
   - pqdm
   - coiled
   - s3fs
-  - jinja2~=3.0.3
-  - nbgitpuller~=1.1.0
+  - nbgitpuller
   - pip
 platforms:
   - linux-64
-  - osx-64
