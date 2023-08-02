@@ -34,7 +34,7 @@ dependencies:
   - lxml
   - ipyleaflet
   - dask-labextension
-  - jupyterlab>=4.0
+  - jupyterlab<4.0a
   - jupyter-server-proxy
   - jupyterhub-singleuser
   - jupyterlab-geojson
@@ -51,6 +51,8 @@ dependencies:
   - kerchunk
   - rechunker
   - pqdm
+  - spectral
+  - scikit-image
   - coiled
   - s3fs
   - nbgitpuller
