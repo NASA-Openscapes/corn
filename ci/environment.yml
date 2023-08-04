@@ -40,7 +40,6 @@ dependencies:
   - jupyterlab-geojson
   - jupyterlab-git
   - jupyter-resource-usage
-  - jupyter-collaboration
   - jupyterlab-h5web
   - hdf5plugin
   - ipympl

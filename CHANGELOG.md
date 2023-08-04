@@ -1,3 +1,6 @@
+## corn v2023.08.04
+* removed collaboration as is incompatible with Jupyterlab v3.x
+
 ## corn v2023.08.03
 * added spectral
 * added scikit-image
