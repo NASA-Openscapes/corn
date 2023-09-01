@@ -2,7 +2,7 @@ name: openscapes
 channels:
   - conda-forge
 dependencies:
-  - python=3.9
+  - python=3.10
   - dask
   - distributed
   - rioxarray
@@ -46,6 +46,10 @@ dependencies:
   - conda-lock
   - pooch
   - earthaccess>=0.5.3
+  - sliderule~=3.6.0
+  - qgis
+  - h5coro
+  - itslive
   - rasterstats
   - kerchunk
   - rechunker
@@ -55,6 +59,7 @@ dependencies:
   - coiled
   - s3fs
   - nbgitpuller
+  - awscliv2
   - pip
 platforms:
   - linux-64

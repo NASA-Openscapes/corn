@@ -1,8 +1,7 @@
-name: Build and push Docker image
+name: Build and push Docker image when we do a stable release
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 
 jobs:
   build-and-push-docker:
@@ -27,9 +26,7 @@ jobs:
 
     - name: "Set Job Environment Variables"
       run: |
-        SHA7="${GITHUB_SHA::7}"
-        DOCKER_TAG=$SHA7
-        echo "DOCKER_TAG=${DOCKER_TAG}" >> $GITHUB_ENV
+        echo "RELEASE_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
     - name: "Set up QEMU"
       uses: docker/setup-qemu-action@v2
@@ -48,7 +45,7 @@ jobs:
       with:
         context: ci
         push: true
-        tags: openscapes/python:latest, openscapes/python:${{ env.DOCKER_TAG }}
+        tags: openscapes/python:${{ env.RELEASE_DATE }}
 
     - name: Export Full Conda Environment
       run: |
