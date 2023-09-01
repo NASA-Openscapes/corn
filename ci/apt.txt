@@ -7,8 +7,10 @@ tmux
 tree
 vim
 neovim
+emacs
 net-tools
 iproute2
+xclip
 ffmpeg
 build-essential
 software-properties-common

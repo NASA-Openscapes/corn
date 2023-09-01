@@ -4,6 +4,7 @@ set -euo pipefail
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 export PANGEO_ENV="openscapes"
+export DISPLAY=":1.0"
 
 mkdir -p $HOME/Desktop
 
