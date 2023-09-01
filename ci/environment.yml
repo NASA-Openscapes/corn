@@ -39,7 +39,7 @@ dependencies:
   - jupyterhub-singleuser
   - jupyterlab-geojson
   - jupyterlab-git
-  - jupyter-resource-usage
+  - jupyter-resource-usage<1.0.0
   - jupyterlab-h5web
   - hdf5plugin
   - ipympl

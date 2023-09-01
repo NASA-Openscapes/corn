@@ -12,3 +12,9 @@ iproute2
 ffmpeg
 build-essential
 software-properties-common
+
+dbus-x11
+firefox
+xfce4
+xorg
+xubuntu-icon-theme

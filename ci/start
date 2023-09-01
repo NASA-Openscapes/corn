@@ -1,8 +1,13 @@
 #!/bin/bash -l
+set -euo pipefail
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 export PANGEO_ENV="openscapes"
+
+mkdir -p $HOME/Desktop
+
+cp $REPO_DIR/*.desktop $HOME/Desktop/
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
