@@ -38,6 +38,7 @@ dependencies:
   - jupyter-server-proxy
   - jupyterhub-singleuser
   - jupyterlab-geojson
+  - jupyterlab-favorites
   - jupyterlab-git
   - jupyter-resource-usage<1.0.0
   - jupyterlab-h5web
@@ -60,6 +61,10 @@ dependencies:
   - s3fs
   - nbgitpuller
   - awscliv2
+  - jupyter-server-proxy
+  - websockify
+  - pyopencl
+  - ocl-icd-system
   - pip
 platforms:
   - linux-64
