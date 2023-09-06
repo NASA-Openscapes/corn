@@ -13,8 +13,6 @@ mkdir -p "${APPLICATIONS_DIR}"
 mkdir -p "${DESKTOP_DIR}"
 update-desktop-database "${APPLICATIONS_DIR}"
 
-cp *.desktop $HOME/Desktop/
-
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 exec "$@"
