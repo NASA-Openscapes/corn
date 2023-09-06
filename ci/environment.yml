@@ -8,7 +8,7 @@ dependencies:
   - rioxarray
   - xarray>=2022.12
   - h5netcdf
-  - netcdf4=1.6.4
+  - netcdf4>=1.6.4
   - h5py
   - gdal~=3.6
   - libgdal
@@ -40,14 +40,14 @@ dependencies:
   - jupyterlab-geojson
   - jupyterlab-favorites
   - jupyterlab-git
-  - jupyter-resource-usage<1.0.0
+  - jupyter-resource-usage<1.0.0a
   - jupyterlab-h5web
   - hdf5plugin
   - ipympl
   - conda-lock
   - pooch
   - earthaccess>=0.5.3
-  - sliderule~=3.6.0
+  - sliderule>=3.6.0
   - qgis
   - h5coro
   - itslive

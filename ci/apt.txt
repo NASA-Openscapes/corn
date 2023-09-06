@@ -23,4 +23,3 @@ xfce4-panel
 xfce4-session
 xfce4-settings
 xubuntu-icon-theme
-firefox

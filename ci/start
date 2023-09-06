@@ -4,10 +4,14 @@ set -euo pipefail
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-export PANGEO_ENV="openscapes"
 export DISPLAY=":1.0"
 
-mkdir -p $HOME/Desktop
+APPLICATIONS_DIR="${HOME}/.local/share/applications"
+
+DESKTOP_DIR="${HOME}/Desktop"
+mkdir -p "${APPLICATIONS_DIR}"
+mkdir -p "${DESKTOP_DIR}"
+update-desktop-database "${APPLICATIONS_DIR}"
 
 cp *.desktop $HOME/Desktop/
 
