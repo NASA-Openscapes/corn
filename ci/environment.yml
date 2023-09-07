@@ -34,15 +34,18 @@ dependencies:
   - lxml
   - ipyleaflet
   - dask-labextension
-  - jupyterlab<4.0a
   - jupyter-server-proxy
+  - ipywidgets
+  - jupyter-book
+  - jupyterlab<4
+  - jupyterlab-myst
   - jupyterhub-singleuser
   - jupyterlab-geojson
   - jupyterlab-favorites
   - jupyterlab-git
   - jupyter-resource-usage<1.0.0a
-  - jupyterlab-h5web
-  - hdf5plugin
+  - jupyterlab-h5web<8.0
+  # - hdf5plugin
   - ipympl
   - conda-lock
   - pooch
