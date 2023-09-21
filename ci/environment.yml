@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.10
   - dask
+  - dask-gateway
   - distributed
   - rioxarray
   - xarray>=2022.12
