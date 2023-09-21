@@ -51,7 +51,7 @@ dependencies:
   - ipympl
   - conda-lock
   - pooch
-  - earthaccess>=0.5.3
+  - earthaccess>=0.6.1
   - sliderule>=3.6.0
   - qgis
   - h5coro
