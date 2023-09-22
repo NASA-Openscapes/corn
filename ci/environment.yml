@@ -35,7 +35,9 @@ dependencies:
   - pydap
   - lxml
   - ipyleaflet
-  - dask-labextension
+  # when jlab 4 gets released we can upgrade dask-labextension
+  # - dask-labextension
+  - dask-labextension==6.2.0
   - jupyter-server-proxy
   - ipywidgets
   - jupyter-book

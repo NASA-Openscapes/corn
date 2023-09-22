@@ -6,13 +6,6 @@ set -euo pipefail
 
 export DISPLAY=":1.0"
 
-APPLICATIONS_DIR="${HOME}/.local/share/applications"
-
-DESKTOP_DIR="${HOME}/Desktop"
-mkdir -p "${APPLICATIONS_DIR}"
-mkdir -p "${DESKTOP_DIR}"
-update-desktop-database "${APPLICATIONS_DIR}"
-
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 exec "$@"
