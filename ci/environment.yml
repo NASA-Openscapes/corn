@@ -53,7 +53,7 @@ dependencies:
   - ipympl
   - conda-lock
   - pooch
-  - earthaccess>=0.6.1
+  - earthaccess>=0.8.2
   - sliderule>=3.6.0
   - qgis
   - h5coro
@@ -69,6 +69,7 @@ dependencies:
   - nbgitpuller
   - awscliv2
   - jupyter-server-proxy
+  - jupyter-vscode-proxy
   - websockify
   - pyopencl
   - ocl-icd-system
