@@ -70,6 +70,7 @@ dependencies:
   - awscliv2
   - jupyter-server-proxy
   - jupyter-vscode-proxy
+  - code-server >=3.2
   - websockify
   - pyopencl
   - ocl-icd-system

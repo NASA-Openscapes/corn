@@ -1,0 +1,3 @@
+code-server --install-extension ms-python.python
+awsv2 --install
+export alias aws='awsv2'
