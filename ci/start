@@ -17,7 +17,7 @@ mkdir -p "${DESKTOP_DIR}"
 
 
 
-curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.desktop -O --output--dir "${APPLICATIONS_DIR}/."
+curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.desktop -o "${APPLICATIONS_DIR}/qgis.desktop"
 
 ln -sf "${APPLICATIONS_DIR}/qgis.desktop" "${DESKTOP_DIR}/qgis.desktop"
 
@@ -28,7 +28,7 @@ MIME_DIR="${HOME}/.local/share/mime"
 MIME_PACKAGES_DIR="${MIME_DIR}/packages"
 mkdir -p "${MIME_PACKAGES_DIR}"
 
-curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.xml -O --output--dir "${MIME_PACKAGES_DIR}/."
+curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.xml -o "${MIME_PACKAGES_DIR}/qgis.xml"
 
 update-mime-database "${MIME_DIR}"
 
