@@ -420,7 +420,7 @@ https://conda.anaconda.org/conda-forge/noarch/typing-extensions-4.9.0-hd8ed1ab_0
 https://conda.anaconda.org/conda-forge/noarch/urllib3-1.26.18-pyhd8ed1ab_0.conda#bf61cfd2a7f212efba378167a07d4a6a
 https://conda.anaconda.org/conda-forge/noarch/virtualenv-20.25.0-pyhd8ed1ab_0.conda#c119653cba436d8183c27bf6d190e587
 https://conda.anaconda.org/conda-forge/linux-64/xerces-c-3.2.5-hac6953d_0.conda#63b80ca78d29380fe69e69412dcbe4ac
-https://conda.anaconda.org/conda-forge/linux-64/yarl-1.9.3-py310h2372a71_0.conda#10246f66639d9ca55e790410f0dbb465
+https://conda.anaconda.org/conda-forge/linux-64/yarl-1.9.4-py310h2372a71_0.conda#4ad35c8f6a64a6ab708780dad603aef4
 https://conda.anaconda.org/conda-forge/noarch/annotated-types-0.6.0-pyhd8ed1ab_0.conda#997c29372bdbe2afee073dff71f35923
 https://conda.anaconda.org/conda-forge/linux-64/argon2-cffi-bindings-21.2.0-py310h2372a71_4.conda#68ee85860502d53c8cbfa0e4cef0f6cb
 https://conda.anaconda.org/conda-forge/noarch/arrow-1.3.0-pyhd8ed1ab_0.conda#b77d8c2313158e6e461ca0efb1c2c508
@@ -485,7 +485,7 @@ https://conda.anaconda.org/conda-forge/linux-64/imagecodecs-2024.1.1-py310h496a8
 https://conda.anaconda.org/conda-forge/noarch/imageio-2.33.1-pyh8c1a49c_0.conda#1c34d58ac469a34e7e96832861368bce
 https://conda.anaconda.org/conda-forge/noarch/ipython-8.20.0-pyh707e725_0.conda#c2d2d7453560c80a2138c354610c08ba
 https://conda.anaconda.org/conda-forge/noarch/isoduration-20.11.0-pyhd8ed1ab_0.tar.bz2#4cb68948e0b8429534380243d063a27a
-https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.20.0-pyhd8ed1ab_0.conda#1116d79def5268414fb0917520b2bbf1
+https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.21.0-pyhd8ed1ab_0.conda#63dd555524e29934d1d3c9f7001ec4bd
 https://conda.anaconda.org/conda-forge/noarch/jupyter_client-8.6.0-pyhd8ed1ab_0.conda#6bd3f1069cdebb44c7ae9efb900e312d
 https://conda.anaconda.org/conda-forge/noarch/jwcrypto-1.5.0-pyhd8ed1ab_0.conda#d66d9bbf048ab54a885922ef42bb27bd
 https://conda.anaconda.org/conda-forge/linux-64/netcdf-fortran-4.6.1-nompi_hacb5139_103.conda#50f05f98d084805642d24dff910e11e8
@@ -532,7 +532,7 @@ https://conda.anaconda.org/conda-forge/noarch/h5netcdf-1.3.0-pyhd8ed1ab_0.conda#
 https://conda.anaconda.org/conda-forge/linux-64/hdf5plugin-4.3.0-py310hf0a3695_0.conda#e9141be3ee1065bf644599ee7b2fef9d
 https://conda.anaconda.org/conda-forge/noarch/ipykernel-6.29.0-pyhd33586a_0.conda#10915bfa94b94f4ad0f347efd124a339
 https://conda.anaconda.org/conda-forge/noarch/ipywidgets-8.1.1-pyhd8ed1ab_0.conda#2605fae5ee27100e5f10037baebf4d41
-https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.20.0-pyhd8ed1ab_0.conda#a168c5f84010711f6d4ae650bc22b480
+https://conda.anaconda.org/conda-forge/noarch/jsonschema-with-format-nongpl-4.21.0-pyhd8ed1ab_0.conda#790538f1e539e9d44584cf49422053ca
 https://conda.anaconda.org/conda-forge/noarch/jupyter_telemetry-0.1.0-pyhd8ed1ab_1.tar.bz2#bb9ebdb6d5aa2622484aff1faceee181
 https://conda.anaconda.org/conda-forge/linux-64/keyring-24.3.0-py310hff52083_0.conda#e710fd8e57356a64cace034413da9cb3
 https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.8.2-py310h62c0568_0.conda#3cbbc7d0b54df02c9a006d3de14911d9
@@ -623,7 +623,7 @@ https://conda.anaconda.org/conda-forge/noarch/sliderule-4.1.0-pyhd8ed1ab_0.conda
 https://conda.anaconda.org/conda-forge/noarch/dask-2024.1.0-pyhd8ed1ab_0.conda#972955a551de85754e66bb61bd628232
 https://conda.anaconda.org/conda-forge/noarch/nbgitpuller-1.2.0-pyhd8ed1ab_0.conda#e74db5ccfcf794e3d67ec7c9c125a39a
 https://conda.anaconda.org/conda-forge/noarch/coiled-1.3.5-pyhd8ed1ab_0.conda#e0ffd5913dcfa93ee00f698d9396f4c6
-https://conda.anaconda.org/conda-forge/noarch/dask-gateway-2024.1.0-pyh694c41f_0.conda#64ab22c30cf31bcf803d3a47cfc29b86
+https://conda.anaconda.org/conda-forge/noarch/dask-gateway-2024.1.0-pyh8af1aa0_0.conda#8e8c5875b0bbdf9777ab6f02ae350ebd
 https://conda.anaconda.org/conda-forge/noarch/intake-0.7.0-pyhd8ed1ab_0.conda#310f0fdaec6eecd9cc7833a788bafb1f
 https://conda.anaconda.org/conda-forge/noarch/myst-parser-0.18.1-pyhd8ed1ab_0.tar.bz2#bcfdf5c7d8bf5c6f6be7b4c66fff2eca
 https://conda.anaconda.org/conda-forge/noarch/myst-nb-0.17.2-pyhd8ed1ab_0.conda#40190b7d06f86b63d28fa78aaa39c023
