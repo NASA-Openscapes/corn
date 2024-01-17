@@ -76,6 +76,7 @@ dependencies:
   - awscliv2
   - jupyter-server-proxy
   - jupyter-vscode-proxy
+  - jupyter-collaboration
   - code-server >=3.2
   - pip
 platforms:
