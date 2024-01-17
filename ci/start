@@ -34,4 +34,4 @@ update-mime-database "${MIME_DIR}"
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-exec "$@" --collaborative
+exec "$@"
