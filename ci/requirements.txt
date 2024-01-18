@@ -2,3 +2,4 @@ harmony-py
 xq
 jupyterlab-quarto
 jupyter-desktop-server==0.1.3
+graphviz
