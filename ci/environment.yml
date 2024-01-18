@@ -5,6 +5,7 @@ dependencies:
   - python=3.10
   - dask
   - dask-gateway
+  - graphviz
   - distributed
   - rioxarray
   - xarray>=2022.12
