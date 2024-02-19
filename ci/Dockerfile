@@ -10,15 +10,11 @@ ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.4
 
 RUN wget -O /tmp/quarto.deb ${QUARTO_CLI} && dpkg -i /tmp/quarto.deb && rm -rf /tmp/quarto.deb && apt-get clean
 
-RUN conda activate notebook && conda uninstall -y netcdf4 libnetcdf && pip install netcdf4==1.6.5
-
 USER ${NB_USER}
 
 WORKDIR ${HOME}/.kernels
 
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
-
-
 
 
 ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
