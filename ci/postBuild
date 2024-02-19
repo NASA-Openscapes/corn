@@ -1,6 +1,3 @@
 code-server --install-extension ms-python.python
 awsv2 --install
 export alias aws='awsv2'
-conda activate /srv/conda/envs/notebook
-conda uninstall -y netcdf4 libnetcdf
-pip install netcdf4==1.6.5
