@@ -7620,7 +7620,7 @@ package:
   category: main
   optional: false
 - name: jupyterhub-base
-  version: 4.1.2
+  version: 4.1.3
   manager: conda
   platform: linux-64
   dependencies:
@@ -7641,10 +7641,10 @@ package:
     sqlalchemy: '>=1.4'
     tornado: '>=5.1'
     traitlets: '>=4.3.2'
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-4.1.2-pyh31011fe_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-base-4.1.3-pyh31011fe_0.conda
   hash:
-    md5: 91e198b04cddf15a11d3948902b326f4
-    sha256: 0b259e764f9fcb3202b64b23cef033201741bd2819222e744a7797115a95b7bb
+    md5: 4cb0e27ffdabb50c578f61537d2d8a36
+    sha256: f3b91d1405c0d59105198f5050258957ad2fc9bd5a34448aa0b5d84f37b7f40a
   category: main
   optional: false
 - name: kerchunk
@@ -8699,18 +8699,18 @@ package:
   category: main
   optional: false
 - name: jupyterhub-singleuser
-  version: 4.1.2
+  version: 4.1.3
   manager: conda
   platform: linux-64
   dependencies:
     __unix: ''
-    jupyterhub-base: 4.1.2
+    jupyterhub-base: 4.1.3
     jupyterlab: '>=3.1'
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-singleuser-4.1.2-pyh31011fe_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyterhub-singleuser-4.1.3-pyh31011fe_0.conda
   hash:
-    md5: 9727c36e1a6de880bd8cba4bdfdd4cce
-    sha256: e9e02d623d62bc33e70d3d773c122d39272558b10b8cb1f021b919da719efc76
+    md5: 6467148c37dc3449a797089d49046113
+    sha256: 58a232e47c1feab9c8bd23d79418bd683717f068972daa667ce0cbb1b5dcac01
   category: main
   optional: false
 - name: jupyterlab-git

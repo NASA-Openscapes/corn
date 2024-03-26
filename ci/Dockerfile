@@ -4,8 +4,6 @@ RUN conda init zsh && conda init bash
 
 COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
 
-USER ${NB_USER}
-
 WORKDIR ${HOME}/.kernels
 
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
