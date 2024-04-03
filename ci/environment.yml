@@ -49,6 +49,7 @@ dependencies:
   - jupyterlab-git
   - jupyter-resource-usage
   - jupyterlab-h5web
+  - jupytext
   - hdf5plugin
   - ipympl
   - conda-lock
