@@ -13,7 +13,7 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: 97b757e373a43ef73ac724cc7307bd88e0bd7ffc5224398583139320537d2e02
+    linux-64: 91cb68c180ad358265778ed2886c1d45395ada938c256928867aac1012ca7722
     osx-64: 6d59f11fb699691855babaac5df22a7bc888dd786af8f128be140e228232e4a4
   channels:
   - url: conda-forge
@@ -2231,15 +2231,15 @@ package:
   category: main
   optional: false
 - name: certifi
-  version: 2023.11.17
+  version: 2024.2.2
   manager: conda
   platform: linux-64
   dependencies:
     python: '>=3.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/certifi-2023.11.17-pyhd8ed1ab_2.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/certifi-2024.2.2-pyhd8ed1ab_0.conda
   hash:
-    md5: 4ab68750a7c37b30744c5459be7f26e0
-    sha256: 4e60cb7ad9e02f15359623fccc68854adc750be3dc8ea0f052cdbde92c2de6a2
+    md5: 0876280e409658fc6f9e75d035960333
+    sha256: f1faca020f988696e6b6ee47c82524c7806380b37cfdd1def32f92c326caca54
   category: main
   optional: false
 - name: charset-normalizer
@@ -7033,23 +7033,6 @@ package:
   hash:
     md5: bf88047f9b28edcb45dfa86f143d93ea
     sha256: bbe9706be75cfaddb18b417c8eb96d4475a05e7fe86f39e021fa18d3e7becab4
-  category: main
-  optional: false
-- name: hdf5plugin
-  version: 4.4.0
-  manager: conda
-  platform: linux-64
-  dependencies:
-    h5py: ''
-    hdf5: '>=1.14.3,<1.14.4.0a0'
-    libgcc-ng: '>=12'
-    libstdcxx-ng: '>=12'
-    python: '>=3.10,<3.11.0a0'
-    python_abi: 3.10.*
-  url: https://conda.anaconda.org/conda-forge/linux-64/hdf5plugin-4.4.0-py310h2eeb3d2_0.conda
-  hash:
-    md5: 9590ec5c09d8b79cd37f284ac8593c7d
-    sha256: b214656db744ed565bdb52228a5c1fbcb3aaaff235bee53e251f604f2133e39f
   category: main
   optional: false
 - name: ipykernel

@@ -75,15 +75,12 @@ dependencies:
   - jupyterlab-git
   - jupyter-resource-usage
   - jupyterlab-h5web>=12.0.0
-  - hdf5plugin
   - conda-lock
   - pooch
   - git>=2.39
   - pqdm
   - nbgitpuller
   - awscliv2
-  - certifi=2023.11.17
-  - cftime=1.6.3
   # https://github.com/jupyterlab/jupyter-collaboration/issues/202
   # - jupyter-collaboration
   - code-server >=3.2
