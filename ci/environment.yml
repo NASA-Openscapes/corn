@@ -65,6 +65,7 @@ dependencies:
   - jupyter-server-proxy
   - jupyter-vscode-proxy
   - ipywidgets
+  - jupytext
   - jupyter-book
   - jupyterlab>4
   - jupyterlab-myst
@@ -84,8 +85,9 @@ dependencies:
   - certifi=2023.11.17
   - cftime=1.6.3
   # https://github.com/jupyterlab/jupyter-collaboration/issues/202
-  - jupyter-collaboration
+  # - jupyter-collaboration
   - code-server >=3.2
   - quarto
+  # we could use more platforms but in the hub only linux-64 is relevant
 platforms:
   - linux-64
