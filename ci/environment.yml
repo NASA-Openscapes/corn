@@ -5,6 +5,7 @@ dependencies:
   - python=3.10
   # distributed python
   - dask[complete]
+  - dask-geopandas
   - flox
   - dask-gateway
   - graphviz
@@ -67,7 +68,8 @@ dependencies:
   - ipywidgets
   - jupytext
   - jupyter-book
-  - jupyterlab>4
+  - jupyterlab>=4.0,<4.1
+  - gh-scoped-creds==4.1
   - jupyterlab-myst
   - jupyterhub-singleuser
   - jupyterlab-geojson
@@ -75,6 +77,7 @@ dependencies:
   - jupyterlab-git
   - jupyter-resource-usage
   - jupyterlab-h5web>=12.0.0
+  - hdf5plugin
   - conda-lock
   - pooch
   - git>=2.39
