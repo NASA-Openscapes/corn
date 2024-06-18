@@ -16,6 +16,10 @@ WORKDIR ${HOME}/.kernels
 
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
 
+RUN mkdir -p /opt/code-server/extensions && \
+    echo "extensions-dir: /opt/code-server/extensions" >> $HOME/.config/code-server/config.yaml && \
+    EXT_LIST="ms-python.python quarto.quarto" && \
+    for EXT in $EXT_LIST; do code-server --install-extension $EXT; done
 
 ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
 
