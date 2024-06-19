@@ -16,9 +16,7 @@ WORKDIR ${HOME}/.kernels
 
 RUN chmod +x install-kernels.sh && cd /home/jovyan/.kernels && ./install-kernels.sh environments
 
-# Install VSCode extensions. These get installed to $CONDA_PREFIX/envs/notebook/share/code-server/extensions/
-RUN EXT_LIST="ms-python.python quarto.quarto" && \
-    for EXT in $EXT_LIST; do code-server --install-extension $EXT; done
+RUN chmod +x install-vscode-ext.sh && ./install-vscode-ext.sh vscode-extensions.txt
 
 ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
 
