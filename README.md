@@ -59,6 +59,43 @@ For other Jupyterhub deployments we can change the image using the hub configura
 
 > Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now.
 
+## Testing changes locally
+
+If you want to test your changes locally, you can do so using Docker:
+
+1. [Install Docker Desktop](https://docs.docker.com/desktop/)
+2. Make sure Docker is running, then build the image with:
+
+```
+# make sure you are in the "ci" directory
+cd ci
+docker build -t openscapes/corn:test . --platform linux/amd64
+```
+
+The `--platform linux/amd64` flag is only necessary if you are _not_ on a
+machine with an x86-64 chip architecture (e.g., an M1 or M2 Mac, which have an
+ARM-based architecture).
+
+Once the image has been built, you can run it with:
+
+```
+docker run -p 8888:8888 --platform linux/amd64 openscapes/corn:test jupyter lab --ip=0.0.0.0
+```
+
+If a browser doesn't automatically open, you can open one of the links that 
+is generated in the output. It will look something like:
+
+```
+http://127.0.0.1:8888/lab?token=a74663dba15a5e5cab52ef4bd6a9346034fd1ab927f6a29b
+```
+
+Note that the home directory (`/home/jovyan`) will look different than you are
+used to in the Hub. This is because in the local image the home directory still
+contains artifacts from the image building process, while in the Hub a shared
+AWS NFS drive is mounted to `home/jovyan`, giving you access to your persistent
+home directory in the Hub.
+
+
 ## What's next?
 
 This is a effective but probably inefficient way of building environments, exploring staged partial builds in Docker or using [conda-store](https://github.com/Quansight/conda-store) to build each environment and then pulling them into a Docker image may be more efficient.
