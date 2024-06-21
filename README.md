@@ -39,7 +39,7 @@ amazing-env
 
 ## **That's it!**
 
-> Note: if you have pip installable depencencies, they must be listed using a `requirements.txt` file.
+> Note: if you have pip installable dependencies, they must be listed using a `requirements.txt` file.
 
 <!-- [![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=Openscapes&message=AWS+us-west-2&color=orange)](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2021-Cloud-Hackathon&urlpath=lab%2Ftree%2F2021-Cloud-Hackathon%2Ftutorials&branch=main) --> 
 
@@ -47,21 +47,22 @@ amazing-env
 
 To update the [quarto](https://quarto.org) installation you'll need to change the version number in two places in corn's [Dockerfile](https://github.com/NASA-Openscapes/corn/blob/main/ci/Dockerfile#L10). After committing changes, the GitHub Action will begin - see next.
 
-## Using a Kernel
+## Updating the image in the JupyterHub
 
-After we commit our changes to this repo, create a tagged release with format `vYYYY.MM.DD`. This is important because the GitHub Action build only gets triggered with that tagged release format. Then, the Github Action will push the resulting Docker image to [dockerhub](https://hub.docker.com/repository/docker/openscapes/corn). This can take ~20 minutes. Then, we need to update the user image in our Jupyterhub configuration (admin > Services > configurator)(right now it's hard-coded to `openscapes/corn:$TAG`, previously was `betolink`.) For 2i2c deployments there is a GUI that allows administrators to do it.
+After we commit our changes to the `main` branch of this repo, the GitHub Action build will be triggered. Then, the Github Action will push the resulting Docker image to [dockerhub](https://hub.docker.com/r/openscapes/python/tags), creating an image tagged with the commit hash. This can take ~20 minutes.
 
-![configurator](https://user-images.githubusercontent.com/717735/139174138-f6eb011e-9cc5-4c15-af68-d77ae5d7ee00.png)
+You can try this newly created image by using the "Bring your own image" functionality in the 
+JupyterHub. Specify the image with the name `openscapes/python:$TAG`, where `$TAG` is the tag of the Dockerhub image (which is the same as the commit hash). You can copy the name from the `docker pull` command shown in [Dockerhub](https://hub.docker.com/r/openscapes/python/tags).
+
+Once you've verified it is working the way you want, we need to update the python image in our Jupyterhub configuration. The quickest way to do this is to create a pull request [here](https://github.com/2i2c-org/infrastructure/blob/main/config/clusters/openscapes/common.values.yaml#L68), updating `openscapes/python:$TAG`, with the tag/commit hash. For 2i2c deployments there is a GUI that allows administrators to do it.
 
 Then, you'll go to <https://openscapes.2i2c.cloud/hub/home> > Stop My Server (or File > Log Out) to stop your server and restart it. Then the Docker image should be updated.
 
-For other Jupyterhub deployments we can change the image using the hub configurator object or even in a Kubernetes chart.
-
 > Note: Looks like 2i2c caches the user image so tags like `main` won't be updated even if they have changes. Using the actual commit hash is a better practice for now.
 
-## Testing changes locally
+## Testing changes to the image locally
 
-If you want to test your changes locally, you can do so using Docker:
+If you want to test your changes locally (i.e., without building in GitHub actions and pushing to Dockerhub), you can do so on your own computer using Docker:
 
 1. [Install Docker Desktop](https://docs.docker.com/desktop/)
 2. Make sure Docker is running, then build the image with:
