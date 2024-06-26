@@ -14,12 +14,3 @@ xclip
 ffmpeg
 build-essential
 software-properties-common
-
-libgl1-mesa-glx
-dbus-x11
-xorg
-xfce4
-xfce4-panel
-xfce4-session
-xfce4-settings
-xubuntu-icon-theme
