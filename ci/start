@@ -5,33 +5,6 @@ set -euo pipefail
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 # Taken from https://github.com/CryoInTheCloud/hub-image/blob/main/start
 
-export DISPLAY=":1.0"
-# Add any .desktop files to the application database and desktop. This is done
-# at startup-time because it's expected that a remote filesystem will be
-# mounted at $HOME, which would overwrite the data if it was created at
-# build-time.
-APPLICATIONS_DIR="${HOME}/.local/share/applications"
-DESKTOP_DIR="${HOME}/Desktop"
-mkdir -p "${APPLICATIONS_DIR}"
-mkdir -p "${DESKTOP_DIR}"
-
-
-
-curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.desktop -o "${APPLICATIONS_DIR}/qgis.desktop"
-
-ln -sf "${APPLICATIONS_DIR}/qgis.desktop" "${DESKTOP_DIR}/qgis.desktop"
-
-update-desktop-database "${APPLICATIONS_DIR}"
-
-# Add MIME Type data from XML files in `mime/` dir to the MIME database.
-MIME_DIR="${HOME}/.local/share/mime"
-MIME_PACKAGES_DIR="${MIME_DIR}/packages"
-mkdir -p "${MIME_PACKAGES_DIR}"
-
-curl https://raw.githubusercontent.com/NASA-Openscapes/corn/main/ci/qgis.xml -o "${MIME_PACKAGES_DIR}/qgis.xml"
-
-update-mime-database "${MIME_DIR}"
-
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
 exec "$@"

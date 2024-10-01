@@ -1,14 +1,8 @@
-FROM pangeo/base-image:2023.01.13
+FROM pangeo/base-image:2024.08.18
 # build file for pangeo images
 RUN conda init zsh && conda init bash
 
 COPY --chown=jovyan:jovyan . /home/jovyan/.kernels
-
-USER root
-
-ENV QUARTO_CLI=https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.555/quarto-1.4.555-linux-amd64.deb
-    
-RUN wget -O /tmp/quarto.deb ${QUARTO_CLI} && dpkg -i /tmp/quarto.deb && rm -rf /tmp/quarto.deb && apt-get clean
 
 USER ${NB_USER}
 
