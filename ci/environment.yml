@@ -81,6 +81,7 @@ dependencies:
   - conda-lock
   - pooch
   - git>=2.39
+  - git-lfs
   - pqdm
   - nbgitpuller>=1.2.1
   - awscliv2
