@@ -2,10 +2,11 @@ name: openscapes
 channels:
   - conda-forge
 dependencies:
-  - python=3.10
+  - python~=3.11
   # distributed python
-  - dask[complete]
+  - dask[complete]~=2024.10
   - dask-geopandas
+  - fsspec>=2023.05
   - flox
   - dask-gateway
   - graphviz
@@ -32,11 +33,12 @@ dependencies:
   - lz4
   - lxml
   # pangeo
-  - xarray>=2023.12
+  - xarray
   - rioxarray
   - intake
   - geopandas
   - rechunker
+  - virtualizarr
   # pangeo-dataviz
   - holoviews
   - geoviews
@@ -46,8 +48,9 @@ dependencies:
   - matplotlib-base
   - ipympl
   - bqplot
+  - gmt
   # backends
-  - h5py
+  - h5py>3.11
   - zarr
   - h5coro
   - kerchunk
@@ -56,12 +59,12 @@ dependencies:
   - pydap
   - icepyx
   - harmony-py
-  - sliderule>=3.6.0
-  - earthaccess>=0.9.0
+  - earthaccess>=0.10.0
   - pystac-client
   - itslive
   - s3fs
   # Jupyterlab
+  - git-lfs
   - dask-labextension
   - jupyter-server-proxy>=4.1.1
   - jupyter-vscode-proxy
@@ -83,6 +86,8 @@ dependencies:
   - git>=2.39
   - pqdm
   - nbgitpuller>=1.2.1
+  - ocl-icd-system
+  - websockify>=0.10
   - awscliv2
   # https://github.com/jupyterlab/jupyter-collaboration/issues/202
   # - jupyter-collaboration

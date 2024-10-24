@@ -1,3 +1,0 @@
-netcdf4==1.6.5
-certifi==2023.11.17
-cftime==1.6.3
