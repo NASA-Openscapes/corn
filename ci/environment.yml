@@ -93,6 +93,9 @@ dependencies:
   # - jupyter-collaboration
   - code-server >=3.2
   - quarto
+  # For admin (cleaning home dirs)
+  - escapism
+  - pigz
   # we could use more platforms but in the hub only linux-64 is relevant
   - pip 
   - pip:
