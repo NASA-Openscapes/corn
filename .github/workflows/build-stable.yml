@@ -11,19 +11,6 @@ jobs:
         shell: bash -l {0}
     steps:
     - uses: actions/checkout@v2
-    - uses: conda-incubator/setup-miniconda@v2
-      with:
-        python-version: "3.10"
-        channels: conda-forge
-        miniforge-variant: Mambaforge
-        environment-file: ci/environment-lock.yml
-        activate-environment: env-lock
-
-    - name: "Create conda-locks"
-      working-directory: ./ci
-      run: |
-          find environments -mindepth 1 -maxdepth 1 -type d | xargs -I % sh -c  "cd %; conda-lock -k explicit -f environment.yml"
-
     - name: "Set Job Environment Variables"
       run: |
         echo "RELEASE_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
