@@ -25,7 +25,7 @@ jobs:
     - name: run conda-lock
       shell: bash -el {0}
       run: |
-        conda-lock lock --mamba --file environment.yml --platform linux-64
+        conda-lock lock --mamba --file ci/environment.yml --platform linux-64
     - name: commit changes to tracked files
       run: |
         if [[ $(git ls-files --modified) ]]; then
