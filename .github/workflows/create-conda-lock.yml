@@ -6,7 +6,7 @@ on:
       - dev
     paths:
       - .github/workflows/conda-lock.yaml
-      - environment.yml
+      - ci/environment.yml
   workflow_dispatch:
 permissions:
   contents: write
