@@ -14,3 +14,4 @@ xclip
 ffmpeg
 build-essential
 software-properties-common
+pigz
