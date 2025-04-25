@@ -28,6 +28,8 @@ jobs:
       run: |
         conda-lock lock --mamba --file environment.yml --platform linux-64
     - name: commit changes to tracked files
+      env: 
+        GH_TOKEN: ${{ secrets.UPDATE_LOCKFILE_TOKEN }}
       run: |
         if [[ $(git ls-files --modified) ]]; then
           git config --global user.name 'actions-bot'
