@@ -4,6 +4,11 @@ on:
     branches:
       - main
       - dev
+    # build if anything in ci/ changes except only environment.yml because 
+    # environment-lock.yml needs to be built first by create-conda-lock.yml
+    paths:
+      - 'ci/**'
+      - '!ci/environment.yml'
   workflow_dispatch:
 
 jobs:
