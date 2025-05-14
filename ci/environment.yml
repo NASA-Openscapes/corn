@@ -1,6 +1,7 @@
 name: openscapes
 channels:
   - conda-forge
+  - nodefaults
 dependencies:
   - python=3.11
   # distributed python
@@ -40,9 +41,12 @@ dependencies:
   - xarray>=2024.10
   - rioxarray
   - intake
+  - intake-xarray
+  - intake-erddap
   - geopandas
   - rechunker
   - virtualizarr
+  - python-dotenv
   # pangeo-dataviz
   - holoviews
   - geoviews
@@ -70,7 +74,7 @@ dependencies:
   - itslive
   - s3fs
   - erddapy
-  - copernicusmarine
+  - copernicusmarine>=2.1.0
   # Jupyterlab
   - git-lfs
   - dask-labextension
