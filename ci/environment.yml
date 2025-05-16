@@ -48,7 +48,7 @@ dependencies:
   - virtualizarr
   - python-dotenv
   # pangeo-dataviz
-  - holoviews
+  - pyviz_comms
   - geoviews
   - hvplot
   - datashader
@@ -73,9 +73,11 @@ dependencies:
   - pystac-client
   - itslive
   - s3fs
+  - fastparquet
   - erddapy
-  - copernicusmarine>=2.1.0
+  - copernicusmarine>=2.1.1
   # Jupyterlab
+  - python-gist
   - git-lfs
   - dask-labextension
   - jupyter-server-proxy>=4.1.1
