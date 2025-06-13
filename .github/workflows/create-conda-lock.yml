@@ -7,6 +7,13 @@ on:
     paths:
       - .github/workflows/create-conda-lock.yml
       - ci/environment.yml
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      - .github/workflows/create-conda-lock.yml
+      - ci/environment.yml
   workflow_dispatch:
 permissions:
   contents: write
