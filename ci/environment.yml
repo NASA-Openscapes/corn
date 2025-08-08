@@ -109,6 +109,9 @@ dependencies:
   - quarto
   # For admin (cleaning home dirs)
   - escapism
+  - xvec
+  - shap
+  - xgboost
   # we could use more platforms but in the hub only linux-64 is relevant
   - pip 
   - pip:
@@ -117,5 +120,6 @@ dependencies:
     - jupyter-desktop-server>=0.1.3
     - jupyterlab-open-url-parameter
     - pigz
+    - neonutilities
 platforms:
   - linux-64
