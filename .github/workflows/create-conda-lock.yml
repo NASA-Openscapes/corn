@@ -37,7 +37,7 @@ jobs:
     - name: commit changes to tracked files
       env: 
         GH_TOKEN: ${{ secrets.UPDATE_LOCKFILE_TOKEN }}
-     run: |
+      run: |
         if [[ $(git ls-files --modified) ]]; then
           git config --global user.name 'ateucher'
           git config --global user.email 'andy.teucher@gmail.com'
