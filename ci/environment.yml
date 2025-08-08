@@ -67,7 +67,6 @@ dependencies:
   - pydap
   - icepyx
   - harmony-py
-  - earthaccess>=0.10.0
   - sliderule>=3.6.0
   - earthaccess>=0.14.0
   - pystac-client
