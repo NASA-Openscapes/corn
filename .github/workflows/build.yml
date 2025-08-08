@@ -16,6 +16,8 @@ on:
     workflows: ["update conda lockfile"]
     types:
       - completed
+  
+  workflow_dispatch:
 
 jobs:
   build-and-push-docker:
