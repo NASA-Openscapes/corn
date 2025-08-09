@@ -13,6 +13,8 @@ on:
       - '.github/workflows/build.yml'
 
   workflow_run:
+    # This only runs on default branch. Currently need to use the worklow 
+    # dipatch on GitHub to trigger this workflow on other branches.
     workflows: ["update conda lockfile"]
     types:
       - completed
@@ -27,7 +29,7 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: "Set Job Environment Variables"
         run: |

@@ -13,7 +13,7 @@
 version: 1
 metadata:
   content_hash:
-    linux-64: 601b07b86ed1ee8d4684997b63f3de59cb61cbfeee10f5c838cf9b4ca5c89622
+    linux-64: 61fb896ff8835f43f9eb57c2e822756aef024e4ca37bf061996379bd7fc33d3c
   channels:
   - url: conda-forge
     used_env_vars: []
@@ -1438,6 +1438,19 @@ package:
   hash:
     md5: 312e5e1b017c3f578f01a52d08743659
     sha256: 5d212111664337a57e52df0a041597054af0047e82a44731d131f20575cc5052
+  category: main
+  optional: false
+- name: cf_xarray
+  version: 0.10.6
+  manager: conda
+  platform: linux-64
+  dependencies:
+    python: '>=3.10'
+    xarray: '>=2023.09.0'
+  url: https://conda.anaconda.org/conda-forge/noarch/cf_xarray-0.10.6-pyhd8ed1ab_0.conda
+  hash:
+    md5: ba7f685033288dd0baf3586500dc61b2
+    sha256: 1a2bc35405e00fc5bfcc39bea25e634c931b0ee93e0696f672b61de3e1cd7bd2
   category: main
   optional: false
 - name: cffi
@@ -5309,10 +5322,10 @@ package:
   platform: linux-64
   dependencies:
     libopenblas: '>=0.3.30,<1.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-33_h59b9bed_openblas.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-34_h59b9bed_openblas.conda
   hash:
-    md5: b43d5de8fe73c2a5fb2b43f45301285b
-    sha256: 18b165b45f3cea3892fee25a91b231abf29f521df76c8fcc0c92f6cf5071a911
+    md5: 064c22bac20fecf2a99838f9b979374c
+    sha256: 08a394ba934f68f102298259b150eb5c17a97c30c6da618e1baab4247366eab3
   category: main
   optional: false
 - name: libbrotlicommon
@@ -5376,10 +5389,10 @@ package:
   platform: linux-64
   dependencies:
     libblas: 3.9.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/libcblas-3.9.0-33_he106b2a_openblas.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libcblas-3.9.0-34_he106b2a_openblas.conda
   hash:
-    md5: 28052b5e6ea5bd283ac343c5c064b950
-    sha256: b34271bb9c3b2377ac23c3fb1ecf45c08f8d09675ff8aad860f4e3c547b126a7
+    md5: 148b531b5457ad666ed76ceb4c766505
+    sha256: edde454897c7889c0323216516abb570a593de728c585b14ef41eda2b08ddf3a
   category: main
   optional: false
 - name: libcrc32c
@@ -5972,10 +5985,10 @@ package:
   platform: linux-64
   dependencies:
     libblas: 3.9.0
-  url: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.9.0-33_h7ac8fdf_openblas.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/liblapack-3.9.0-34_h7ac8fdf_openblas.conda
   hash:
-    md5: e598bb54c4a4b45c3d83c72984f79dbb
-    sha256: 60c2ccdfa181bc304b5162c73cdecb5b4c3972da71758472c71fefb33965cde3
+    md5: f05a31377b4d9a8d8740f47d1e70b70e
+    sha256: 9c941d5da239f614b53065bc5f8a705899326c60c9f349d9fbd7bd78298f13ab
   category: main
   optional: false
 - name: liblzma
@@ -6471,6 +6484,21 @@ package:
   hash:
     md5: 5aa797f8787fe7a17d1b0821485b5adc
     sha256: 6ae68e0b86423ef188196fff6207ed0c8195dd84273cb5623b85aa08033a410c
+  category: main
+  optional: false
+- name: libxgboost
+  version: 3.0.3
+  manager: conda
+  platform: linux-64
+  dependencies:
+    __glibc: '>=2.17,<3.0.a0'
+    _openmp_mutex: '>=4.5'
+    libgcc: '>=14'
+    libstdcxx: '>=14'
+  url: https://conda.anaconda.org/conda-forge/linux-64/libxgboost-3.0.3-cpu_h2ebb00f_0.conda
+  hash:
+    md5: e274bce5bc572ef599f4498a1d770a01
+    sha256: dc2d9214746b2c2e1f710a1039d08ce69cc7e6025e3f28a53a08c8b7c06d82cc
   category: main
   optional: false
 - name: libxkbcommon
@@ -8237,6 +8265,22 @@ package:
     sha256: 71bd24600d14bb171a6321d523486f6a06f855e75e547fa0cb2a0953b02047f0
   category: main
   optional: false
+- name: py-xgboost
+  version: 3.0.3
+  manager: conda
+  platform: linux-64
+  dependencies:
+    libxgboost: '>=3.0.3,<3.0.4.0a0'
+    numpy: ''
+    python: '>=3.10'
+    scikit-learn: ''
+    scipy: ''
+  url: https://conda.anaconda.org/conda-forge/noarch/py-xgboost-3.0.3-cpu_pyh718b53a_0.conda
+  hash:
+    md5: e56b2d5bec878da24c1bf9a8bf6a9242
+    sha256: ad18a95f9cc15114f73c69faa2ba96cd28ffe2abd6f5f4842c299ed3ab00cccd
+  category: main
+  optional: false
 - name: pyarrow
   version: 21.0.0
   manager: conda
@@ -9618,6 +9662,32 @@ package:
     sha256: 972560fcf9657058e3e1f97186cc94389144b46dbdf58c807ce62e83f977e863
   category: main
   optional: false
+- name: shap
+  version: 0.48.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    __glibc: '>=2.17,<3.0.a0'
+    cloudpickle: ''
+    libgcc: '>=13'
+    libstdcxx: '>=13'
+    numba: '>=0.54'
+    numpy: '>=1.23,<3'
+    packaging: '>20.9'
+    pandas: ''
+    python: '>=3.11,<3.12.0a0'
+    python_abi: 3.11.*
+    scikit-learn: ''
+    scipy: ''
+    slicer: 0.0.8
+    tqdm: '>=4.27.0'
+    typing_extensions: ''
+  url: https://conda.anaconda.org/conda-forge/linux-64/shap-0.48.0-cpu_py311h59270be_1.conda
+  hash:
+    md5: a44bb590767813bca9a27f9ebdbb8501
+    sha256: 10f3fb5c4b201f06b12dfe197bde7007ea425afc9ffc9a89db3bc8ff58e898e5
+  category: main
+  optional: false
 - name: shapely
   version: 2.0.7
   manager: conda
@@ -9696,6 +9766,18 @@ package:
   hash:
     md5: 3339e3b65d58accf4ca4fb8748ab16b3
     sha256: 458227f759d5e3fcec5d9b7acce54e10c9e1f4f4b7ec978f3bfd54ce4ee9853d
+  category: main
+  optional: false
+- name: slicer
+  version: 0.0.8
+  manager: conda
+  platform: linux-64
+  dependencies:
+    python: '>=3.6'
+  url: https://conda.anaconda.org/conda-forge/noarch/slicer-0.0.8-pyhd8ed1ab_0.conda
+  hash:
+    md5: f6f75ceccf92ddb21665b03cfbfa7800
+    sha256: 915b33075b7aa0c9f339038e2747394e949c34035f74104530a643f895ace621
   category: main
   optional: false
 - name: sliderule
@@ -10959,6 +11041,19 @@ package:
     sha256: 339ab0ff05170a295e59133cd0fa9a9c4ba32b6941c8a2a73484cc13f81e248a
   category: main
   optional: false
+- name: xgboost
+  version: 3.0.3
+  manager: conda
+  platform: linux-64
+  dependencies:
+    py-xgboost: 3.0.3
+    python: '>=3.10'
+  url: https://conda.anaconda.org/conda-forge/noarch/xgboost-3.0.3-cpu_pyhb39878e_0.conda
+  hash:
+    md5: 6cd1a267eef097d2ba7b44a0191b0066
+    sha256: 879956b6fc3549548cf8f3a0cb7a3dd2bdce3dc19285386349b362cdc3a117e9
+  category: main
+  optional: false
 - name: xkeyboard-config
   version: '2.45'
   manager: conda
@@ -11194,6 +11289,22 @@ package:
     sha256: 752fdaac5d58ed863bbf685bb6f98092fe1a488ea8ebb7ed7b606ccfce08637a
   category: main
   optional: false
+- name: xvec
+  version: 0.4.0
+  manager: conda
+  platform: linux-64
+  dependencies:
+    cf_xarray: '>=0.9.2'
+    pyproj: '>=3.0.0'
+    python: '>=3.10'
+    shapely: '>=2.0b1'
+    xarray: '>=2022.12.0'
+  url: https://conda.anaconda.org/conda-forge/noarch/xvec-0.4.0-pyhd8ed1ab_0.conda
+  hash:
+    md5: c2569c6375a1924ea11edb7b6c9742b0
+    sha256: 505f6b338c25ad22b9631c026550f56ea9e23d12aeafa5e507bb95287b0f1ab6
+  category: main
+  optional: false
 - name: xyzservices
   version: 2025.4.0
   manager: conda
@@ -11396,6 +11507,33 @@ package:
   url: https://files.pythonhosted.org/packages/7e/6b/a3c4d85f8f609c78336e76b78733d5cdd0871b79fcce1fa66533849aab0c/jupyterlab_quarto-0.3.5-py3-none-any.whl
   hash:
     sha256: 114165409aaad2e68202374ab3d02b08015ed3898427d81bdb3fe9f995e151b9
+  category: main
+  optional: false
+- name: neonutilities
+  version: 1.1.0
+  manager: pip
+  platform: linux-64
+  dependencies:
+    importlib-resources: '*'
+    pandas: '*'
+    parameterized: '*'
+    pyarrow: '*'
+    pyproj: '*'
+    requests: '*'
+    tqdm: '*'
+  url: https://files.pythonhosted.org/packages/bf/74/2de5c199f9cd136ff6f5fe060cd0bfda7bde7186453eb03b171fd6120dbc/neonutilities-1.1.0-py3-none-any.whl
+  hash:
+    sha256: 2a4150209fa925181b06b7a3b71fe9eb15c9be113f94831c31b95a2e4ad3afcb
+  category: main
+  optional: false
+- name: parameterized
+  version: 0.9.0
+  manager: pip
+  platform: linux-64
+  dependencies: {}
+  url: https://files.pythonhosted.org/packages/00/2f/804f58f0b856ab3bf21617cccf5b39206e6c4c94c2cd227bde125ea6105f/parameterized-0.9.0-py2.py3-none-any.whl
+  hash:
+    sha256: 4e0758e3d41bea3bbd05ec14fc2c24736723f243b28d702081aef438c9372b1b
   category: main
   optional: false
 - name: pigz
