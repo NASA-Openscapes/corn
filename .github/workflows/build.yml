@@ -12,18 +12,21 @@ on:
       - '!ci/environment.yml'
       - '.github/workflows/build.yml'
 
-  workflow_run:
-    # This only runs on default branch. Currently need to use the worklow 
-    # dipatch on GitHub to trigger this workflow on other branches.
-    workflows: ["update conda lockfile"]
-    types:
-      - completed
+  pull_request:
+    branches:
+      - main
+      - dev
+    paths:
+      # build if anything in ci/ changes except only environment.yml because 
+      # environment-lock.yml needs to be built first by create-conda-lock.yml
+      - 'ci/**'
+      - '!ci/environment.yml'
+      - '.github/workflows/build.yml'
   
   workflow_dispatch:
 
 jobs:
   build-and-push-docker:
-    if: ${{ github.event_name == 'push' || github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'}}
     runs-on: ubuntu-latest
     defaults:
       run:
