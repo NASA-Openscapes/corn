@@ -67,7 +67,6 @@ dependencies:
   - pydap
   - icepyx
   - harmony-py
-  - earthaccess>=0.10.0
   - sliderule>=3.6.0
   - earthaccess>=0.14.0
   - pystac-client
@@ -109,6 +108,9 @@ dependencies:
   - quarto
   # For admin (cleaning home dirs)
   - escapism
+  - xvec
+  - shap
+  - xgboost
   # we could use more platforms but in the hub only linux-64 is relevant
   - pip 
   - pip:
