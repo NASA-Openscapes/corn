@@ -84,6 +84,7 @@ dependencies:
   - ipywidgets
   - jupytext
   - jupyter-book
+  # Pin at 4.2 for compatibility with jupyter-collaboration
   - jupyterlab==4.2
   - gh-scoped-creds==4.1
   - jupyterlab-myst
