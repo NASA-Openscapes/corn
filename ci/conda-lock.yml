@@ -5066,7 +5066,7 @@ package:
   category: main
   optional: false
 - name: leafmap
-  version: 0.52.0
+  version: 0.52.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -5103,10 +5103,10 @@ package:
     scooby: ''
     whiteboxgui: ''
     xyzservices: ''
-  url: https://conda.anaconda.org/conda-forge/noarch/leafmap-0.52.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/leafmap-0.52.1-pyhd8ed1ab_0.conda
   hash:
-    md5: 52673b3e4477415449f5a08d4a0884e9
-    sha256: 5bbc999569329165bb86b854e36e7558e6fc189f9fa5d9720bca36ad640b2ca2
+    md5: 99950acedde405b1d957e76447696000
+    sha256: 2cdf9d58f7713803ac0aa7aced2db313185efdc5376cb78b786cc16707633fea
   category: main
   optional: false
 - name: legacy-cgi
@@ -8334,7 +8334,7 @@ package:
   category: main
   optional: false
 - name: pynacl
-  version: 1.5.0
+  version: 1.6.0
   manager: conda
   platform: linux-64
   dependencies:
@@ -8345,10 +8345,10 @@ package:
     python: '>=3.11,<3.12.0a0'
     python_abi: 3.11.*
     six: ''
-  url: https://conda.anaconda.org/conda-forge/linux-64/pynacl-1.5.0-py311h49ec1c0_5.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/pynacl-1.6.0-py311h49ec1c0_0.conda
   hash:
-    md5: b5a14b8f6ce20f92728313462ea31047
-    sha256: 3aff87790bb733220ca2c7a9f11f8cfa195b821fdf99d5bd80a17978b6417fc2
+    md5: b162c70937079effb76cd0d2544846fc
+    sha256: b25bdaed59ccd03067231a67e895a824d6d8e8b83d7db45e18894d62c843e787
   category: main
   optional: false
 - name: pynco
