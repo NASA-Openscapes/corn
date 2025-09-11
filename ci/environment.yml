@@ -84,7 +84,8 @@ dependencies:
   - ipywidgets
   - jupytext
   - jupyter-book
-  - jupyterlab>=4.0
+  # Pin at 4.2 for compatibility with jupyter-collaboration
+  - jupyterlab==4.2
   - gh-scoped-creds==4.1
   - jupyterlab-myst
   - jupyterhub-singleuser
