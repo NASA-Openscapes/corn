@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - python=3.11
+  - python=3.13
   # distributed python
   - dask[complete]
   - cubed[diagnostics]
@@ -68,7 +68,7 @@ dependencies:
   - icepyx
   - harmony-py
   - sliderule>=3.6.0
-  - earthaccess>=0.14.0
+  - earthaccess>=0.16.0
   - pystac-client
   - itslive
   - s3fs
