@@ -68,7 +68,7 @@ dependencies:
   - icepyx
   - harmony-py
   - sliderule>=3.6.0
-  - earthaccess>=0.16.0
+  - earthaccess>=0.17.0
   - pystac-client
   - itslive
   - s3fs
@@ -84,8 +84,7 @@ dependencies:
   - ipywidgets
   - jupytext
   - jupyter-book
-  # Pin at 4.2 for compatibility with jupyter-collaboration
-  - jupyterlab>=4.3
+  - jupyterlab>=4.4
   - gh-scoped-creds==4.1
   - jupyterlab-myst
   - jupyterhub-singleuser
