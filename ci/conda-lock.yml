@@ -1799,20 +1799,20 @@ package:
   category: main
   optional: false
 - name: cryptography
-  version: 47.0.0
+  version: 48.0.0
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    cffi: '>=1.14'
+    cffi: '>=2.0'
     libgcc: '>=14'
     openssl: '>=3.5.6,<4.0a0'
     python: '>=3.13,<3.14.0a0'
     python_abi: 3.13.*
-  url: https://conda.anaconda.org/conda-forge/linux-64/cryptography-47.0.0-py313heb322e3_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/cryptography-48.0.0-py313heb322e3_0.conda
   hash:
-    md5: 4c306970ee46832e06298198e1656532
-    sha256: a017928e4851b0d644c07bb1e7c3129761c3ced700ef5a5d6556434521c2ddd2
+    md5: 2310978ddde7f742d0b7a642d4894388
+    sha256: 7c10cdde9f46d4b990e9c90ffb72bfb672b56d2ecae243d95582c9a9fc417ebf
   category: main
   optional: false
 - name: cubed
@@ -4003,16 +4003,16 @@ package:
   category: main
   optional: false
 - name: ipyvue
-  version: 1.11.2
+  version: 1.12.0
   manager: conda
   platform: linux-64
   dependencies:
     ipywidgets: '>=7.0.0'
     python: '>=3.6'
-  url: https://conda.anaconda.org/conda-forge/noarch/ipyvue-1.11.2-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/ipyvue-1.12.0-pyhd8ed1ab_0.conda
   hash:
-    md5: bdcd3fe0e72a6335ba5a30068f135375
-    sha256: 8cc751f06301d1fc23f791085353875a6b6fb52da9251fb995a371b0b9643832
+    md5: 6aa1dbc856843788ec4d7cbf36622170
+    sha256: 72082d0439a4c242b0cbb8ebee99d029564b4620db08a35fde8a813684dd7f0f
   category: main
   optional: false
 - name: ipyvuetify
@@ -4440,7 +4440,7 @@ package:
   category: main
   optional: false
 - name: jupyter_server
-  version: 2.18.0
+  version: 2.18.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -4463,10 +4463,10 @@ package:
     tornado: '>=6.2.0'
     traitlets: '>=5.6.0'
     websocket-client: '>=1.7'
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyter_server-2.18.0-pyhcf101f3_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyter_server-2.18.1-pyhcf101f3_0.conda
   hash:
-    md5: 148450224bdca4f51bf4fe66c6e57cd7
-    sha256: 953b8528e088ad3b38764c043d8c168d28583593a6a8dd02a1e8c1e4c860d378
+    md5: 0bfbcb99dbf7d3b833cbca0ea5273fc2
+    sha256: b613da32590f531be5ac5e9656649e7bebf3b948a4243050a4f205dd198efd68
   category: main
   optional: false
 - name: jupyter_server_terminals
@@ -6045,18 +6045,17 @@ package:
   category: main
   optional: false
 - name: libsqlite
-  version: 3.53.0
+  version: 3.53.1
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    icu: '>=78.3,<79.0a0'
     libgcc: '>=14'
     libzlib: '>=1.3.2,<2.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.53.0-hf4e2dac_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.53.1-h0c1763c_0.conda
   hash:
-    md5: 810d83373448da85c3f673fbcb7ad3a3
-    sha256: ec37c79f737933bbac965f5dc0f08ef2790247129a84bb3114fad4900adce401
+    md5: 7dc38adcbf71e6b38748e919e16e0dce
+    sha256: 54cdcd3214313b62c2a8ee277e6f42150d9b748264c1b70d958bf735e420ef8d
   category: main
   optional: false
 - name: libssh2
@@ -9574,21 +9573,20 @@ package:
   category: main
   optional: false
 - name: sqlite
-  version: 3.53.0
+  version: 3.53.1
   manager: conda
   platform: linux-64
   dependencies:
     __glibc: '>=2.17,<3.0.a0'
-    icu: '>=78.3,<79.0a0'
     libgcc: '>=14'
-    libsqlite: 3.53.0
+    libsqlite: 3.53.1
     libzlib: '>=1.3.2,<2.0a0'
-    ncurses: '>=6.5,<7.0a0'
+    ncurses: '>=6.6,<7.0a0'
     readline: '>=8.3,<9.0a0'
-  url: https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.53.0-h04a0ce9_0.conda
+  url: https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.53.1-hbc0de68_0.conda
   hash:
-    md5: dc540e5bd5616d83a1ec46af8315ff98
-    sha256: a0e35087ebf0720fa758cb261583bee0a328143238524ea47625b37108280291
+    md5: 8e0b8654ead18e50af552e54b5a08a61
+    sha256: d167fa92781bcdcd3b9aaa6bb1cd50c5b108f6190c170098a118b5cf5df2f881
   category: main
   optional: false
 - name: stack_data
@@ -10703,7 +10701,7 @@ package:
   category: main
   optional: false
 - name: zarr
-  version: 3.2.0
+  version: 3.2.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -10714,10 +10712,10 @@ package:
     packaging: '>=22.0'
     python: ''
     typing_extensions: '>=4.13'
-  url: https://conda.anaconda.org/conda-forge/noarch/zarr-3.2.0-pyhc364b38_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/zarr-3.2.1-pyhc364b38_0.conda
   hash:
-    md5: 824dfe766449380ca5a3f18f122610bb
-    sha256: 876c7c1a64d52e20609daada6b6b30502f6cd303a2ef59775424e37786b1ae8d
+    md5: b787cd1f01e24b161261438a5589df51
+    sha256: 88716d633ac7fdc896ce7aa00efdfc91df6363d51bebabfb60d34399c023a3d0
   category: main
   optional: false
 - name: zeromq
