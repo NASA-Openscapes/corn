@@ -120,5 +120,6 @@ dependencies:
       - jupyterlab-open-url-parameter
       - pigz
       - jupyter-sshd-proxy
+      - jupyter-positron-server
 platforms:
   - linux-64
