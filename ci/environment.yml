@@ -68,7 +68,7 @@ dependencies:
   - icepyx
   - harmony-py
   - sliderule>=3.6.0
-  - earthaccess>=0.17.0
+  - earthaccess>=0.18.0
   - pystac-client
   - itslive
   - s3fs
