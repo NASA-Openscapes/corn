@@ -12,7 +12,8 @@ RUN ./install-positron.sh
 
 USER ${NB_USER}
 
-COPY --chmod=755 install-vscode-ext.sh vscode-extensions.txt ./
+COPY --chmod=755 install-vscode-ext.sh ./
+COPY vscode-extensions.txt ./
 RUN ./install-vscode-ext.sh vscode-extensions.txt
 
 ENV JUPYTERHUB_HTTP_REFERER=https://openscapes.2i2c.cloud/
